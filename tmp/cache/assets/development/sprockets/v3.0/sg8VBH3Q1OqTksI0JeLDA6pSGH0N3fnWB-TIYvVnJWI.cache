@@ -1,0 +1,5 @@
+I"H(function() {
+  $('#edituserModal').modal('show');
+
+}).call(this);
+:ET

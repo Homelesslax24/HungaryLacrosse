@@ -1,0 +1,77 @@
+// Place all the styles related to the user controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.form-group {
+	margin-top: 20px;
+}
+
+.form-control {
+	width: 100%;
+}
+
+.form-group-two-line {
+	width: 48.7%;
+	margin-right: 10px;
+}
+
+.form-group-two-line-end {
+	width: 48.7%;
+	margin-right: 0;
+	padding-right: 0;
+}
+
+.form-group-three-line {
+	width: 32%;
+	margin-right: 10px;
+}
+
+.form-group-three-line-end {
+	width: 31.5%;
+	margin-right: 0;
+	padding-right: 0;
+}
+
+.form-group-name {
+	width: 42.5%;
+	margin-right: 10px;
+}
+
+.form-group-mi {
+	width: 10.3%;
+	margin-right: 0;
+	padding-right: 0;
+}
+
+.form-group-address {
+	width: 77%;
+	margin-right: 10px
+}
+
+.form-group-apt {
+	width: 20.3%;
+}
+
+#form-full-width {
+	width: 100%;
+}
+
+#form-group-sm {
+	width: 40%;
+}
+
+.form-rule{
+	margin-bottom: 0;
+}
+
+.account-avatar {
+	border-radius: 50%;
+	display: inline;
+	position: relative;
+	margin-top: -20px;
+	margin-bottom: -10px;
+	margin-right: 15px;
+	padding: 0;
+
+
+}
