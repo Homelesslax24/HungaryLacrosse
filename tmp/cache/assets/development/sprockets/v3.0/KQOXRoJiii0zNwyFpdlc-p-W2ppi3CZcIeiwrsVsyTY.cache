@@ -1,7 +1,0 @@
-I"U(function() {
-  $('#myModal').modal({
-    keyboard: false
-  });
-
-}).call(this);
-:ET
