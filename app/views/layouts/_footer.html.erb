@@ -1,6 +1,18 @@
-<div class="container-fluid">
-	<div class="row col-md-10 col-md-offset-1 center"><hr>
-		<p>&copy; Annapols Lacrosse Club 2015</p>
-		<p><%= link_to "Powered by Third Law Studios", "http://www.thirdlawstudios.com" %></p>
+<div class="container-fluid" id="footer">
+	<div class="row col-md-10 col-md-offset-1 center">
+		<hr>
+	</div>	
+	<div class="row">
+		<div class="container">
+			<div class="col-md-4">
+				<p>&copy; Hungarian Lacrosse Association | 2015</p>
+			</div>
+			<div class="col-md-4 center">
+				<p><%= link_to "Powered by Third Law Studios", "http://www.thirdlawstudios.com" %></p>
+			</div>
+			<div class="col-md-4">
+				<%= link_to image_tag("twitter/TwitterLogo.png", :alt => "Twitter", class: "social-logo"), "https://twitter.com/hungary_lax", {target: "_blank"} %>
+			</div>
+		</div>	
 	</div>
 </div>

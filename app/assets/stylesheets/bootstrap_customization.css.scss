@@ -9,12 +9,12 @@ $font-size-h2:													3.5em;
 
 $navbar-height:                        	45px;
 $navbar-default-bg: 										white;
-$navbar-default-link-hover-color: 			#0EED0E;
-$navbar-default-link-active-color:			#0EED0E;
+$navbar-default-link-hover-color: 			#EC1D25;
+$navbar-default-link-active-color:			#EC1D25;
 
-$brand-primary: 												#0EED0E;
+$brand-primary: 												#EC1D25;
 
-$btn-default-color:											#0EED0E;
+$btn-default-color:											#EC1D25;
 $btn-default-bg:												#ecf0f1;
 
 @import 'bootstrap-sprockets';
@@ -39,11 +39,15 @@ textarea {
 }
 
 .cursive {
-	font-family: 'Arizonia', 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-.lime {
-	color: #0EED0E !important;
+.primary-color {
+	color: #EC1D25 !important;
+}
+
+.secondary-color {
+	color: #087B39 !important;
 }
 
 .center {
@@ -72,7 +76,7 @@ textarea {
 }
 
 #main-title {
-	margin-top: 24%;
+	margin-top: 28%;
 	font-size: 700%;
 }
 
@@ -89,9 +93,24 @@ textarea {
 	background-color: #ddd;
 }
 
+#teams {
+	background-color: #2E2927;
+	color: white;
+}
+
+#footer {
+	background-color: white;
+}
+
 .sponsor-logo {
 	margin-top: 25px;
 	margin-bottom: 75px;
+}
+
+.social-logo {
+	max-height: 50px !important;
+	max-width: 50px !important;
+	margin-top: -15px;
 }
 
 /* Float Shadow */

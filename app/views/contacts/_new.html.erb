@@ -3,15 +3,15 @@
   <%= form_for :contact, url: contacts_path, method: :post do |f| %>
     <div class="form-group">
       <%= f.label :name %><br />
-      <%= f.text_field :name, autofocus: true, required: true, class: "form-control" %>
+      <%= f.text_field :name, autofocus: false, required: true, class: "form-control" %>
     </div>
     <div class="form-group">
       <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true, required: true, class: "form-control" %>
+      <%= f.email_field :email, autofocus: false, required: true, class: "form-control" %>
     </div>
     <div class="form-group">
       <%= f.label :message %><br />
-      <%= f.text_area :message, autofocus: true, required: true, class: "form-control contact-message", rows: "10" %>
+      <%= f.text_area :message, autofocus: false, required: true, class: "form-control contact-message", rows: "10" %>
     </div>
     
     <div style="display:none;">

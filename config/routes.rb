@@ -4,7 +4,9 @@ Rails.application.routes.draw do
 
   resources "contacts", only: [:new, :create]
 
-
+  get "news", to: "pages#news"
+  get "nationalteam", to: "pages#nationalteam"
+  get "association", to: "pages#association"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

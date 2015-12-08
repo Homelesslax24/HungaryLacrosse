@@ -8,25 +8,46 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <%= link_to "Annapolis Lacrosse Club", root_path, class: "navbar-brand cursive lime" %>
+      <%= link_to "Hungarian Lacrosse Association", root_path, class: "navbar-brand cursive primary-color" %>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "About us", root_path(anchor:"about") %></li>
+        <li><%= link_to "News", news_path %></li>
+        <li><%= link_to "Events", root_path(anchor:"events") %></li>
+        <li><%= link_to "Teams", root_path(anchor:"teams") %></li>
         <li><%= link_to "Sponsors", root_path(anchor:"sponsors") %></li>
-        <li><%= link_to "News", root_path(anchor:"news") %></li>
-        <li><%= link_to "Schedule/Results", root_path(anchor:"schedule") %></li>
-        <li><%= link_to "Roster", root_path(anchor:"roster") %></li>
-        <% if user_signed_in? %>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">National Team <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Eligibility Requirements</a></li>
+            <li role="separator" class="divider"></li>
+            <li><%= link_to "Men's National Team", nationalteam_path %></li>
+          </ul>
+        </li>    
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Association <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><%= link_to "Contact", association_path %></li>
+            <li role="separator" class="divider"></li>
+            <li><%= link_to "History", association_path %></li>
+            <li><%= link_to "About Us", association_path %></li>
+            <li><%= link_to "Executive Board", association_path %></li>
+            <li><%= link_to "Media", association_path %></li>
+            <li role="separator" class="divider"></li>
+            <li><%= link_to "Hungarian Lacrosse Federation", "http://www.hungarianlacrosse.com", target: "_blank" %></li>
+          </ul>
+        </li>    
+<!--  Removed until login is required
+       <% if user_signed_in? %>s
           <li><%= link_to "Account Settings", edit_user_registration_path %></li>
           <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li> 
         <% else %>
           <li><%= link_to "Contact Us", root_path(anchor:"contact") %></li>
           <li><button type="button" class="btn btn-default navbar-btn"><%= link_to "Sign In", new_user_session_path %></li></button>
-        <% end %>
+       <% end %>  -->
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
