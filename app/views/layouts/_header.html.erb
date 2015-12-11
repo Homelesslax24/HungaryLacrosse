@@ -15,14 +15,14 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "News", news_path %></li>
+        <li><%= link_to "News", root_path(anchor:"news") %></li>
         <li><%= link_to "Events", root_path(anchor:"events") %></li>
         <li><%= link_to "Teams", root_path(anchor:"teams") %></li>
         <li><%= link_to "Sponsors", root_path(anchor:"sponsors") %></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">National Team <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Eligibility Requirements</a></li>
+            <li><%= link_to "Eligibility Requirements", nationalteam_path %></li>
             <li role="separator" class="divider"></li>
             <li><%= link_to "Men's National Team", nationalteam_path %></li>
           </ul>
@@ -37,7 +37,7 @@
             <li><%= link_to "Executive Board", association_path %></li>
             <li><%= link_to "Media", association_path %></li>
             <li role="separator" class="divider"></li>
-            <li><%= link_to "Hungarian Lacrosse Federation", "http://www.hungarianlacrosse.com", target: "_blank" %></li>
+            <li><%= link_to "Hungarian Lacrosse Foundation", "http://www.hungarianlacrosse.com", target: "_blank" %></li>
           </ul>
         </li>    
 <!--  Removed until login is required

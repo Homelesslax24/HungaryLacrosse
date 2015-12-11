@@ -158,6 +158,33 @@ textarea {
 	max-width: 200px;
 	padding-right: 20px;
 }
+
+/* Upcoming Events CSS */
+#events .jumbotron {
+	background-color: #ddd;
+}
+
+#events h2 {
+	margin-top: 0;
+}
+.event-post{
+	text-align: left;
+}
+
+.event-img-main {
+	max-height: 500px;
+	max-width: 500px;
+	padding-right: 50px;
+}
+
+.event-header {
+
+}
+
+.event-text {
+
+}
+
 /* Sponsor CSS*/
 .sponsor-logo {
 	margin-top: 25px;
