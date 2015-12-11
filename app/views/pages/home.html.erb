@@ -4,7 +4,108 @@
 	<%= render 'pages/welcome_buttons' unless user_signed_in? %> -->
 </div>
 <div class="jumbotron center no-margin-top", id="news"> <!-- News -->
-	<h2>News</h2>
+	<div class="row" id="social-news">	<!-- Social News Feed -->
+		<div class="container-fluid">
+			<div class="col-xs-12 col-md-4 social-feed">
+				<div class="jumbotron">
+					<h2>Twitter Feed</h2>
+					<h4>tweets</h4>
+					<h4>tweets</h4>
+					<h4>tweets</h4>
+					<h4>tweets</h4>
+					<h4>tweets</h4>
+				</div>	
+			</div>
+			<div class="col-xs-12 col-md-4 social-feed">
+				<div class="jumbotron">
+					<h2>Facebook Feed</h2>
+					<h4>Facebook Posts</h4>
+					<h4>Facebook Posts</h4>
+					<h4>Facebook Posts</h4>
+					<h4>Facebook Posts</h4>
+					<h4>Facebook Posts</h4>
+				</div>	
+			</div>
+			<div class="col-xs-12 col-md-4 social-feed">
+				<div class="jumbotron">
+					<h2>Instagram Feed</h2>
+					<h4>Instagram Posts</h4>
+					<h4>Instagram Posts</h4>
+					<h4>Instagram Posts</h4>
+					<h4>Instagram Posts</h4>
+					<h4>Instagram Posts</h4>
+				</div>	
+			</div>
+		</div>	
+	</div>
+	<div class="row" id="news-feed"> <!-- News Posts -->
+		<!-- This will eventually be dynamically populated from a post database. In the meantime, I have it hardcoded-->
+		<div class="container-fluid">
+			<div class="col-xs-12 news-item">
+				<div class="jumbotron col-xs-12">
+					<div class="post-header">
+						<div class="col-xs-1">
+							<div class="post-date">
+								<p>5 Jul </br>2015</p>
+							</div>
+						</div>	
+						<div class="col-xs-10 col-xs-offset-1 post-title">
+							<h2>Hungary Lacrosse Teams with Israel Lacrosse for Training Camp and Scrimmage</h2><!-- New Coaching Staff Hired/First Training Camp a Success! -->
+							<hr>
+						</div>
+					</div>
+					<div class="col-xs-12 col-md-2">
+						<%= image_tag("hungarycamp2014.jpg", :alt => "Hungary Training Camp", class:"post-img-main") %>
+					</div>
+					<div class="col-xs-12 col-md-10 left">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et nunc ut nulla mattis commodo. Nulla in sem libero. Fusce sit amet purus libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque nec arcu consequat, euismod dui vitae, euismod tellus. Aenean velit odio, ultrices ut sodales sed, viverra nec nibh. Morbi a scelerisque mi. Pellentesque ante eros, convallis nec placerat non, luctus et lorem. Maecenas finibus elementum lorem, eget posuere metus tincidunt in. Praesent dignissim ipsum eros, sit amet tempor lorem interdum sit amet.<p>
+					</div>
+				</div>	
+			</div>	
+			<div class="col-xs-12 news-item">
+				<div class="jumbotron col-xs-12">
+					<div class="post-header">
+						<div class="col-xs-1">
+							<div class="post-date">
+								<p>5 May </br>2015</p>
+							</div>
+						</div>	
+						<div class="col-xs-10 col-xs-offset-1 post-title">
+							<h2>New Coaching Staff Hired</h2>
+							<hr>
+						</div>
+					</div>
+					<div class="col-xs-12 col-md-2">
+						<%= image_tag("hungarycamp2014.jpg", :alt => "Hungary Training Camp", class:"post-img-main") %>
+					</div>
+					<div class="col-xs-12 col-md-10 left">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et nunc ut nulla mattis commodo. Nulla in sem libero. Fusce sit amet purus libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque nec arcu consequat, euismod dui vitae, euismod tellus. Aenean velit odio, ultrices ut sodales sed, viverra nec nibh. Morbi a scelerisque mi. Pellentesque ante eros, convallis nec placerat non, luctus et lorem. Maecenas finibus elementum lorem, eget posuere metus tincidunt in. Praesent dignissim ipsum eros, sit amet tempor lorem interdum sit amet.<p>
+					</div>
+				</div>	
+			</div>
+			<div class="col-xs-12 news-item">
+				<div class="jumbotron col-xs-12">
+					<div class="post-header">
+						<div class="col-xs-1">
+							<div class="post-date">
+								<p>20 Jul </br>2014</p>
+							</div>
+						</div>	
+						<div class="col-xs-10 col-xs-offset-1 post-title">
+							<h2>First Training Camp a Success!</h2>
+							<hr>
+						</div>
+					</div>
+					<div class="col-xs-12 col-md-2">
+						<%= image_tag("hungarycamp2014.jpg", :alt => "Hungary Training Camp", class:"post-img-main") %>
+					</div>
+					<div class="col-xs-12 col-md-10 left">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et nunc ut nulla mattis commodo. Nulla in sem libero. Fusce sit amet purus libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque nec arcu consequat, euismod dui vitae, euismod tellus. Aenean velit odio, ultrices ut sodales sed, viverra nec nibh. Morbi a scelerisque mi. Pellentesque ante eros, convallis nec placerat non, luctus et lorem. Maecenas finibus elementum lorem, eget posuere metus tincidunt in. Praesent dignissim ipsum eros, sit amet tempor lorem interdum sit amet.<p>
+					</div>
+				</div>	
+			</div>
+		</div>	
+	</div>
 </div>
 <div class="jumbotron center no-margin-top", id="events"> <!-- Events -->
 	<h2>Upcoming Events</h2>

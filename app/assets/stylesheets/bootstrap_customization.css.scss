@@ -1,3 +1,4 @@
+/* Sitewide Fonts, Bootstrap, and CSS */
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
 @import url(https://fonts.googleapis.com/css?family=Arizonia);
 
@@ -16,6 +17,8 @@ $brand-primary: 												#EC1D25;
 
 $btn-default-color:											#EC1D25;
 $btn-default-bg:												#ecf0f1;
+
+$grid-gutter-width:											15px;
 
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
@@ -58,12 +61,23 @@ textarea {
 	text-align:left;
 }
 
-.navbar-brand {
-  font-weight: bold;
+.right {
+	text-align:right;
 }
 
 .first-item {
 	margin-top: 15px;
+}
+
+.no-margin-top {
+	margin-top:0;
+	margin-bottom:0;
+}
+
+/* Navbar and Header CSS*/
+
+.navbar-brand {
+  font-weight: bold;
 }
 
 .header-full {
@@ -80,16 +94,84 @@ textarea {
 	font-size: 700%;
 }
 
-.no-margin-top {
-	margin-top:0;
-	margin-bottom:0;
-}
-
 .title {
 	margin-bottom: 40px;
 }
 
-#about, #news, #roster{
+/* News CSS */
+#news {
+	background-color: #ddd;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+#news .container-fluid {
+	padding-right: 25px;
+	padding-left: 25px;
+}
+
+#news .jumbotron {
+	margin-bottom: 15px;
+}
+
+.social-feed {
+
+}
+
+#news-feed {
+
+}
+
+.news-item {
+
+}
+
+.post-header {
+	text-align: left;
+}
+
+.post-date {
+	background-color: #555;
+	height: 60px;
+	width: 60px;
+	color: white;
+	padding: 5px;
+	display:inline-block;
+	float:left;
+}
+
+.post-title {
+	display:inline-block;
+	float:left;
+}
+
+.post-title h2 {
+	margin-top: 0;
+}
+
+.post-title hr {
+	display:block;
+}
+
+.post-img-main {
+	max-height: 300px;
+	max-width: 200px;
+	padding-right: 20px;
+}
+/* Sponsor CSS*/
+.sponsor-logo {
+	margin-top: 25px;
+	margin-bottom: 75px;
+}
+
+.social-logo {
+	max-height: 50px !important;
+	max-width: 50px !important;
+	margin-top: -15px;
+}
+
+/* Other CSS*/
+#about, #roster{
 	background-color: #ddd;
 }
 
@@ -102,18 +184,7 @@ textarea {
 	background-color: white;
 }
 
-.sponsor-logo {
-	margin-top: 25px;
-	margin-bottom: 75px;
-}
-
-.social-logo {
-	max-height: 50px !important;
-	max-width: 50px !important;
-	margin-top: -15px;
-}
-
-/* Float Shadow */
+/* Float Shadow Effect*/
 .hvr-float-shadow {
   display: inline-block;
 	vertical-align: middle;
@@ -161,7 +232,6 @@ textarea {
 /* move the element down by 5px (it will stay in place because it"s attached to the element that also moves up 5px) */}
 
 /*flash*/
-
 .alert-error {
 background-color: #f2dede;
 border-color: #eed3d7;
