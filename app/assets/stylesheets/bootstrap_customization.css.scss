@@ -161,8 +161,21 @@ textarea {
 }
 
 /* Upcoming Events CSS */
-#events .jumbotron {
+
+#events {
 	background-color: #ddd;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+#events .container-fluid {
+	padding-right: 25px;
+	padding-left: 25px;
+}
+
+#events .jumbotron {
+	background-color: #fff;
+	margin-bottom: 15px;
 }
 
 #events h2 {
