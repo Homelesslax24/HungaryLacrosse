@@ -74,6 +74,12 @@ textarea {
 	margin-bottom:0;
 }
 
+.section-title {
+	font-weight: bold;
+	color: #fff;
+	margin-bottom: 40px;
+}
+
 /* Navbar and Header CSS*/
 
 .navbar-brand {
@@ -94,10 +100,6 @@ textarea {
 	font-size: 700%;
 }
 
-.title {
-	margin-bottom: 40px;
-}
-
 /* News CSS */
 #news {
 	background-color: #ddd;
@@ -114,17 +116,34 @@ textarea {
 	margin-bottom: 15px;
 }
 
+#social-news {
+	padding-left: 0;
+}
+
+#social-news .container-fluid {
+	padding-left: 0;
+}
+
 .social-feed {
 	margin-top: 0px;
 	margin-bottom: 10px;
+	margin-left: 0;
+	margin-right: 15px;
+	padding-left: 0;
+	padding-right: 0;
+	display: block;
 }
 
 #news-feed {
+	padding-right: 15px;
+}
 
+#news-feed .container-fluid {
+	padding-right: 0;
 }
 
 .news-item {
-
+	padding: 0;
 }
 
 .post-header {
@@ -178,8 +197,12 @@ textarea {
 	margin-bottom: 15px;
 }
 
+#events h1 {
+	margin-bottom: 45px;
+}
+
 #events h2 {
-	margin-top: 0;
+
 }
 .event-post{
 	text-align: left;
@@ -191,8 +214,8 @@ textarea {
 	padding-right: 50px;
 }
 
-.event-header {
-
+.event-header h2 {
+	margin-top: 0;
 }
 
 .event-text {
@@ -200,6 +223,10 @@ textarea {
 }
 
 /* Sponsor CSS*/
+#sponsors .section-title {
+	color: #000;
+}
+
 .sponsor-logo {
 	margin-top: 25px;
 	margin-bottom: 75px;

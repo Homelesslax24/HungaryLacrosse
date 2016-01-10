@@ -4,93 +4,96 @@
 	<%= render 'pages/welcome_buttons' unless user_signed_in? %> -->
 </div>
 <div class="jumbotron center no-margin-top", id="news"> <!-- News -->
-	<div class="row" id="social-news">	<!-- Social News Feed -->
-		<div class="container-fluid primary-color left">
-			<div class="col-xs-12 col-md-4 social-feed">  <!-- Twitter Feed -->
-				<a class="twitter-timeline" href="https://twitter.com/Hungary_Lax" data-widget-id="685940902968324101">Tweets by @Hungary_Lax</a>
-				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-			</div>
-			<div class="col-xs-12 col-md-4 social-feed center">  <!-- Facebook Feed -->
-				<div class="fb-page" data-href="https://www.facebook.com/hungarianlacrosse/" data-tabs="timeline" data-width="425" data-height="510" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/hungarianlacrosse/"><a href="https://www.facebook.com/hungarianlacrosse/">Hungarian Lacrosse Association / Magyarországi Lacrosse Szövetség</a></blockquote></div></div>
-			</div>
-			<div class="col-xs-12 col-md-4 social-feed">  <!-- Instagram Feed -->
-				<blockquote class="instagram-media" data-instgrm-version="6" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/BAOVkcyBGKv/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A photo posted by Hungarian National Team (@hungarylax)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-01-07T04:14:05+00:00">Jan 6, 2016 at 8:14pm PST</time></p></div></blockquote>
-				<script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
-			</div>
-		</div>	
-	</div>
-	<div class="row" id="news-feed"> <!-- News Posts -->
-		<!-- This will eventually be dynamically populated from a post database. In the meantime, I have it hardcoded-->
-		<div class="container-fluid">
-			<div class="col-xs-12 news-item">
-				<div class="jumbotron col-xs-12">
-					<div class="post-header">
-						<div class="col-xs-1">
-							<div class="post-date">
-								<p>5 Jul </br>2015</p>
+	<div class="row">
+		<h2 class="section-title">News</h2>
+		<div class="col-xs-12 col-md-9" id="news-feed"> <!-- News Posts -->
+			<!-- This will eventually be dynamically populated from a post database. In the meantime, I have it hardcoded-->
+			<div class="container-fluid">
+				<div class="col-xs-12 news-item">
+					<div class="jumbotron col-xs-12">
+						<div class="post-header">
+							<div class="col-xs-1">
+								<div class="post-date">
+									<p>5 Jul </br>2015</p>
+								</div>
+							</div>	
+							<div class="col-xs-9 col-xs-offset-2 post-title">
+								<h2>Hungary Lacrosse Teams with Israel Lacrosse for Training Camp and Scrimmage</h2><!-- New Coaching Staff Hired/First Training Camp a Success! -->
+								<hr>
 							</div>
-						</div>	
-						<div class="col-xs-10 col-xs-offset-1 post-title">
-							<h2>Hungary Lacrosse Teams with Israel Lacrosse for Training Camp and Scrimmage</h2><!-- New Coaching Staff Hired/First Training Camp a Success! -->
-							<hr>
 						</div>
-					</div>
-					<div class="col-xs-12 col-md-2">
-						<%= image_tag("hungarycamp2014.jpg", :alt => "Hungary Training Camp", class:"post-img-main") %>
-					</div>
-					<div class="col-xs-12 col-md-10 left">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et nunc ut nulla mattis commodo. Nulla in sem libero. Fusce sit amet purus libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque nec arcu consequat, euismod dui vitae, euismod tellus. Aenean velit odio, ultrices ut sodales sed, viverra nec nibh. Morbi a scelerisque mi. Pellentesque ante eros, convallis nec placerat non, luctus et lorem. Maecenas finibus elementum lorem, eget posuere metus tincidunt in. Praesent dignissim ipsum eros, sit amet tempor lorem interdum sit amet.<p>
-					</div>
+						<div class="col-xs-12 col-md-2">
+							<%= image_tag("hungarycamp2014.jpg", :alt => "Hungary Training Camp", class:"post-img-main") %>
+						</div>
+						<div class="col-xs-12 col-md-9 col-md-offset-1 left">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et nunc ut nulla mattis commodo. Nulla in sem libero. Fusce sit amet purus libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque nec arcu consequat, euismod dui vitae, euismod tellus. Aenean velit odio, ultrices ut sodales sed, viverra nec nibh. Morbi a scelerisque mi. Pellentesque ante eros, convallis nec placerat non, luctus et lorem. Maecenas finibus elementum lorem, eget posuere metus tincidunt in. Praesent dignissim ipsum eros, sit amet tempor lorem interdum sit amet.<p>
+						</div>
+					</div>	
 				</div>	
+				<div class="col-xs-12 news-item">
+					<div class="jumbotron col-xs-12">
+						<div class="post-header">
+							<div class="col-xs-1">
+								<div class="post-date">
+									<p>5 May </br>2015</p>
+								</div>
+							</div>	
+							<div class="col-xs-9 col-xs-offset-2 post-title">
+								<h2>New Coaching Staff Hired for the European Championships</h2>
+								<hr>
+							</div>
+						</div>
+						<div class="col-xs-12 col-md-2">
+							<%= image_tag("hungarycamp2014.jpg", :alt => "Hungary Training Camp", class:"post-img-main") %>
+						</div>
+						<div class="col-xs-12 col-md-9 col-md-offset-1 left">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et nunc ut nulla mattis commodo. Nulla in sem libero. Fusce sit amet purus libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque nec arcu consequat, euismod dui vitae, euismod tellus. Aenean velit odio, ultrices ut sodales sed, viverra nec nibh. Morbi a scelerisque mi. Pellentesque ante eros, convallis nec placerat non, luctus et lorem. Maecenas finibus elementum lorem, eget posuere metus tincidunt in. Praesent dignissim ipsum eros, sit amet tempor lorem interdum sit amet.<p>
+						</div>
+					</div>	
+				</div>
+				<div class="col-xs-12 news-item">
+					<div class="jumbotron col-xs-12">
+						<div class="post-header">
+							<div class="col-xs-1">
+								<div class="post-date">
+									<p>20 Jul </br>2014</p>
+								</div>
+							</div>	
+							<div class="col-xs-9 col-xs-offset-2 post-title">
+								<h2>First Training Camp a Success!</h2>
+								<hr>
+							</div>
+						</div>
+						<div class="col-xs-12 col-md-2">
+							<%= image_tag("hungarycamp2014.jpg", :alt => "Hungary Training Camp", class:"post-img-main") %>
+						</div>
+						<div class="col-xs-12 col-md-9 col-md-offset-1 left">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et nunc ut nulla mattis commodo. Nulla in sem libero. Fusce sit amet purus libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque nec arcu consequat, euismod dui vitae, euismod tellus. Aenean velit odio, ultrices ut sodales sed, viverra nec nibh. Morbi a scelerisque mi. Pellentesque ante eros, convallis nec placerat non, luctus et lorem. Maecenas finibus elementum lorem, eget posuere metus tincidunt in. Praesent dignissim ipsum eros, sit amet tempor lorem interdum sit amet.<p>
+						</div>
+					</div>	
+				</div>
 			</div>	
-			<div class="col-xs-12 news-item">
-				<div class="jumbotron col-xs-12">
-					<div class="post-header">
-						<div class="col-xs-1">
-							<div class="post-date">
-								<p>5 May </br>2015</p>
-							</div>
-						</div>	
-						<div class="col-xs-10 col-xs-offset-1 post-title">
-							<h2>New Coaching Staff Hired for the European Championships</h2>
-							<hr>
-						</div>
-					</div>
-					<div class="col-xs-12 col-md-2">
-						<%= image_tag("hungarycamp2014.jpg", :alt => "Hungary Training Camp", class:"post-img-main") %>
-					</div>
-					<div class="col-xs-12 col-md-10 left">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et nunc ut nulla mattis commodo. Nulla in sem libero. Fusce sit amet purus libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque nec arcu consequat, euismod dui vitae, euismod tellus. Aenean velit odio, ultrices ut sodales sed, viverra nec nibh. Morbi a scelerisque mi. Pellentesque ante eros, convallis nec placerat non, luctus et lorem. Maecenas finibus elementum lorem, eget posuere metus tincidunt in. Praesent dignissim ipsum eros, sit amet tempor lorem interdum sit amet.<p>
-					</div>
-				</div>	
-			</div>
-			<div class="col-xs-12 news-item">
-				<div class="jumbotron col-xs-12">
-					<div class="post-header">
-						<div class="col-xs-1">
-							<div class="post-date">
-								<p>20 Jul </br>2014</p>
-							</div>
-						</div>	
-						<div class="col-xs-10 col-xs-offset-1 post-title">
-							<h2>First Training Camp a Success!</h2>
-							<hr>
-						</div>
-					</div>
-					<div class="col-xs-12 col-md-2">
-						<%= image_tag("hungarycamp2014.jpg", :alt => "Hungary Training Camp", class:"post-img-main") %>
-					</div>
-					<div class="col-xs-12 col-md-10 left">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et nunc ut nulla mattis commodo. Nulla in sem libero. Fusce sit amet purus libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque nec arcu consequat, euismod dui vitae, euismod tellus. Aenean velit odio, ultrices ut sodales sed, viverra nec nibh. Morbi a scelerisque mi. Pellentesque ante eros, convallis nec placerat non, luctus et lorem. Maecenas finibus elementum lorem, eget posuere metus tincidunt in. Praesent dignissim ipsum eros, sit amet tempor lorem interdum sit amet.<p>
-					</div>
-				</div>	
-			</div>
 		</div>	
+		<div class="col-xs-12 col-md-3" id="social-news">	<!-- Social News Feed -->
+			<div class="container-fluid primary-color left">
+				<div class="row col-xs-12 social-feed">  <!-- Twitter Feed -->
+					<a class="twitter-timeline" href="https://twitter.com/Hungary_Lax" data-widget-id="685940902968324101">Tweets by @Hungary_Lax</a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+				</div>
+				<div class="row col-xs-12 social-feed">  <!-- Facebook Feed -->
+					<div class="fb-page" data-href="https://www.facebook.com/hungarianlacrosse/" data-tabs="timeline" data-height="465" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/hungarianlacrosse/"><a href="https://www.facebook.com/hungarianlacrosse/">Hungarian Lacrosse Association / Magyarországi Lacrosse Szövetség</a></blockquote></div></div>
+				</div>
+				<div class="row col-xs-12 social-feed">  <!-- Instagram Feed -->
+					<blockquote class="instagram-media" data-instgrm-version="6" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/BAOVkcyBGKv/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A photo posted by Hungarian National Team (@hungarylax)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-01-07T04:14:05+00:00">Jan 6, 2016 at 8:14pm PST</time></p></div></blockquote>
+					<script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+				</div>
+			</div>	
+		</div>
 	</div>
 </div>
 <div class="jumbotron center no-margin-top", id="teams"> <!-- Teams -->
 	<div class="container">
-		<h2 class="title">Teams</h2>
+		<h2 class="section-title">Teams</h2>
 			<div class="container center">
 				<div class="row">
 					<div class="col-lg-6">
@@ -108,7 +111,7 @@
 </div>
 <div class="jumbotron center no-margin-top", id="events"> <!-- Events -->
 	<!-- This will ultimately be populated dynamically -->
-	<h1>Upcoming Events</h1>
+	<h2 class="section-title">Upcoming Events</h2>
 	<div class="container-fluid">
 		<div class="col-xs-12 event-post">
 			<div class="jumbotron col-xs-12">
@@ -149,7 +152,7 @@
 	</div>	
 </div>
 <div class="jumbotron center no-margin-top", id="sponsors"> <!-- Sponsors -->
-	<h2 class="title">Support our Sponsors</h2>
+	<h2 class="section-title">Support our Sponsors</h2>
 	<div class="container center">
 		<div class="row">
 			<div class="col-lg-4">
