@@ -1,23 +1,27 @@
 To Do:
-	Fix Landing
-		Slightly grey picture
-		Fix font and color
-	Create Eligibiltiy page
-	Create National team page 
-		Roster
-		Coaches
-	Create Contact Page
-	Create About page
-		History
-		About us
-		Board Table
-		Media Links?
-	Move Facebook script out of application and make it only appear on the home page (loaded just inside the body tag)
-	Add Admin accounts/Activeadmin
-	Make posts populate dynamically
-	Make events populate dynamically
-	Make teams populate dynamically
-	Make sponsors populate dynamically 
+	Home Page
+		Fix Landing
+			Slightly grey picture
+			Fix font and color
+		Move Facebook script out of application and make it only appear on the home page (loaded just inside the body tag)
+		Add Admin accounts/Activeadmin
+		Make posts populate dynamically
+		Make events populate dynamically
+		Make teams populate dynamically
+		Make sponsors populate dynamically 
+		Update responsiveness of news and events
+
+	National Team page
+		Make Staff populate dynamically
+		Make Players populate dynamically
+
+	Before we share:
+		Fix EC2016 image		
+
+	3rd draft:
+		Parallax background scrolling for third page?	
+
+
 
 Other potential links/subjects:
 	How to Start a Club?

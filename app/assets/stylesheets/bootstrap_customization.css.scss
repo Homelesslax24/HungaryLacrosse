@@ -1,6 +1,5 @@
 /* Sitewide Fonts, Bootstrap, and CSS */
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
-@import url(https://fonts.googleapis.com/css?family=Arizonia);
 
 $body-bg: 															#bdc3c7;
 $jumbotron-bg: 													white;
@@ -78,6 +77,32 @@ textarea {
 	font-weight: bold;
 	color: #fff;
 	margin-bottom: 40px;
+}
+
+/* Shared CSS*/
+#teams {
+	background-color: #2E2927;
+	color: white;
+}
+
+#footer {
+	background-color: white;
+}
+
+#eligibility, #mensnationalteam, #contact, #association {
+	margin-top: 25px;
+}
+
+#mensnationalteam, #association h3 {
+	font-size: 28px;
+}
+
+#eligibility, #mensnationalteam, #association h4 {
+	font-size: 18px;
+}
+
+#eligibility, #mensnationalteam, #association p {
+	font-size: 14px;
 }
 
 /* Navbar and Header CSS*/
@@ -238,18 +263,29 @@ textarea {
 	margin-top: -15px;
 }
 
-/* Other CSS*/
-#about, #roster{
-	background-color: #ddd;
+/* Men's National Team Page CSS*/
+
+#mensnationalteam td {
+	vertical-align: middle;
 }
 
-#teams {
-	background-color: #2E2927;
-	color: white;
+#mensnationalteam .jumbotron {
+	padding-top: 18px;
 }
 
-#footer {
-	background-color: white;
+.staff-img {
+  width: 200px;
+  height: 200px;
+	border-radius: 50%;
+	border: 1px solid #000;
+	margin-left: -30px;
+}
+
+.player-img {
+	width: 40px;
+  height: 40px;
+	border-radius: 50%;
+	border: 1px solid #000;
 }
 
 /* Float Shadow Effect*/
