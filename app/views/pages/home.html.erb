@@ -1,5 +1,7 @@
-<div class="jumbotron center header-full"> <!-- Header -->
-	<h1 class="cursive secondary-color", id="main-title">Hungarian Lacrosse Association</h1>
+<div class="jumbotron header-full"> <!-- Header -->
+	<div class="col-xs-12 col-md-5 col-md-offset-7">
+		<h1 class="cursive secondary-color", id="main-title">Hungarian Lacrosse Association</h1>
+	</div>
 	<!-- Removed until login is required
 	<%= render 'pages/welcome_buttons' unless user_signed_in? %> -->
 </div>
@@ -92,22 +94,20 @@
 	</div>
 </div>
 <div class="jumbotron center no-margin-top", id="teams"> <!-- Teams -->
-	<div class="container">
-		<h2 class="section-title">Teams</h2>
-			<div class="container center">
-				<div class="row">
-					<div class="col-lg-6">
-						<!-- Ultimately want to do this dynamically from a database XXXX-->
-							<%= link_to image_tag("budapestblaxlacrosse.png", :alt => "Budapest Blax"), "http://www.budapestblax.com", {class: "hvr-float-shadow sponsor-logo", target: "_blank"} %>
-							<h3>Budapest Blax Lacrosse</h3>
-					</div>
-					<div class="col-lg-6">
-						<%= link_to image_tag("blackberrieslacrosse.png", :alt => "Blackberries"), "http://www.blackberries.hu", {class: "hvr-float-shadow sponsor-logo", target: "_blank"} %>
-						<h3>Budapest Blackberries Lacrosse</h3>
-					</div>
-				</div>
+	<h2 class="section-title">Teams</h2>
+	<div class="container-fluid">
+		<div class="jumbotron col-xs-12">
+			<div class="col-lg-6">
+				<!-- Ultimately want to do this dynamically from a database XXXX-->
+					<%= link_to image_tag("budapestblaxlacrosse.png", :alt => "Budapest Blax"), "http://www.budapestblax.com", {class: "hvr-float-shadow team-logo", target: "_blank"} %>
+					<h3>Budapest Blax Lacrosse</h3>
 			</div>
-	</div>	
+			<div class="col-lg-6">
+				<%= link_to image_tag("blackberrieslacrosse.png", :alt => "Blackberries"), "http://www.blackberries.hu", {class: "hvr-float-shadow team-logo", target: "_blank"} %>
+				<h3>Budapest Blackberries Lacrosse</h3>
+			</div>
+		</div>
+	</div>
 </div>
 <div class="jumbotron center no-margin-top", id="events"> <!-- Events -->
 	<!-- This will ultimately be populated dynamically -->
@@ -153,27 +153,29 @@
 </div>
 <div class="jumbotron center no-margin-top", id="sponsors"> <!-- Sponsors -->
 	<h2 class="section-title">Support our Sponsors</h2>
-	<div class="container center">
-		<div class="row">
-			<div class="col-lg-4">
-					<%= link_to image_tag("heros-logo_1.gif", :alt => "Heros Lacrosse"), "http://www.heroslacrosse.com", {class: "hvr-float-shadow sponsor-logo", target: "_blank"} %>
+	<div class="container-fluid">
+		<div class="col-xs-12 jumbotron">
+			<div class="row">
+				<div class="col-lg-4">
+						<%= link_to image_tag("heros-logo_1.gif", :alt => "Heros Lacrosse"), "http://www.heroslacrosse.com", {class: "hvr-float-shadow sponsor-logo", target: "_blank"} %>
+				</div>
+				<div class="col-lg-4">
+						<%= link_to image_tag("sj-logo-yellow3.jpg", :alt => "Stan and Joe's"), "http://www.stanandjoessaloon.com", {class: "hvr-float-shadow sponsor-logo", target: "_blank"} %>
+				</div>
+				<div class="col-lg-4">
+						<%= link_to image_tag("markedpromotions.png", :alt => "Marked Promotions"), "http://www.markedpromo.com", {class: "hvr-float-shadow sponsor-logo", target: "_blank"} %>
+				</div>
 			</div>
-			<div class="col-lg-4">
-					<%= link_to image_tag("sj-logo-yellow3.jpg", :alt => "Stan and Joe's"), "http://www.stanandjoessaloon.com", {class: "hvr-float-shadow sponsor-logo", target: "_blank"} %>
-			</div>
-			<div class="col-lg-4">
-					<%= link_to image_tag("markedpromotions.png", :alt => "Marked Promotions"), "http://www.markedpromo.com", {class: "hvr-float-shadow sponsor-logo", target: "_blank"} %>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-lg-4">
-					<%= link_to image_tag("sanders_logo.jpg", :alt => "The Sanders Company"), "http://www.thesanderscompany.com", {class: "hvr-float-shadow sponsor-logo", target: "_blank"} %>
-			</div>
-			<div class="col-lg-4">
-					<%= link_to image_tag("townetransport1.png", :alt => "Towne Transport"), "http://www.townetransport.com", {class: "hvr-float-shadow sponsor-logo", target: "_blank"} %>
-			</div>
-			<div class="col-lg-4">
-					<%= link_to image_tag("bayarea3.png", :alt => "Bay Area Disposal"), "http://www.bayareadisposal.com", {class: "hvr-float-shadow sponsor-logo", target: "_blank"} %>
+			<div class="row">
+				<div class="col-lg-4">
+						<%= link_to image_tag("sanders_logo.jpg", :alt => "The Sanders Company"), "http://www.thesanderscompany.com", {class: "hvr-float-shadow sponsor-logo", target: "_blank"} %>
+				</div>
+				<div class="col-lg-4">
+						<%= link_to image_tag("townetransport1.png", :alt => "Towne Transport"), "http://www.townetransport.com", {class: "hvr-float-shadow sponsor-logo", target: "_blank"} %>
+				</div>
+				<div class="col-lg-4">
+						<%= link_to image_tag("bayarea3.png", :alt => "Bay Area Disposal"), "http://www.bayareadisposal.com", {class: "hvr-float-shadow sponsor-logo", target: "_blank"} %>
+				</div>
 			</div>
 		</div>
 	</div>

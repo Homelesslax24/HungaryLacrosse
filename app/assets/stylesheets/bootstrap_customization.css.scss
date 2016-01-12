@@ -32,6 +32,10 @@ body {
     padding-top: 45px; 
 }
 
+h3 {
+	font-size: 28px;
+}
+
 th {
 	text-align: center;
 }
@@ -49,7 +53,8 @@ textarea {
 }
 
 .secondary-color {
-	color: #087B39 !important;
+	color: #fff !important;
+	//#087B39
 }
 
 .center {
@@ -80,21 +85,23 @@ textarea {
 }
 
 /* Shared CSS*/
-#teams {
-	background-color: #2E2927;
-	color: white;
+.container-fluid {
+	padding-right: 25px;
+	padding-left: 25px;
 }
 
 #footer {
 	background-color: white;
 }
 
-#eligibility, #mensnationalteam, #contact, #association {
-	margin-top: 25px;
+.social-logo {
+	max-height: 50px !important;
+	max-width: 50px !important;
+	margin-top: -15px;
 }
 
-#mensnationalteam, #association h3 {
-	font-size: 28px;
+#eligibility, #mensnationalteam, #contact, #association {
+	margin-top: 25px;
 }
 
 #eligibility, #mensnationalteam, #association h4 {
@@ -115,14 +122,16 @@ textarea {
 	margin-top: 0;
 	margin-bottom: 0;
 	min-height: 655px;
-	background-image: image-url("header_background.jpg");
-	background-size: cover;
-  background-repeat: no-repeat;
+	background-color: #ddd;
+	border-bottom: 4px solid;
+	// background-image: image-url("header_background.jpg");
+	// background-size: cover;
+  // background-repeat: no-repeat;
 }
 
 #main-title {
-	margin-top: 28%;
-	font-size: 700%;
+	margin-top: 20%;
+	font-size: 600%;
 }
 
 /* News CSS */
@@ -130,11 +139,6 @@ textarea {
 	background-color: #ddd;
 	padding-top: 15px;
 	padding-bottom: 15px;
-}
-
-#news .container-fluid {
-	padding-right: 25px;
-	padding-left: 25px;
 }
 
 #news .jumbotron {
@@ -212,11 +216,6 @@ textarea {
 	padding-bottom: 15px;
 }
 
-#events .container-fluid {
-	padding-right: 25px;
-	padding-left: 25px;
-}
-
 #events .jumbotron {
 	background-color: #fff;
 	margin-bottom: 15px;
@@ -247,20 +246,28 @@ textarea {
 
 }
 
+/* Team CSS */
+#teams {
+	background-color: #ddd;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.sponsor-logo {
+	margin-top: 25px;
+	margin-bottom: 0px;
+}
+
 /* Sponsor CSS*/
-#sponsors .section-title {
-	color: #000;
+#sponsors {
+	background-color: #ddd;
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
 
 .sponsor-logo {
 	margin-top: 25px;
 	margin-bottom: 75px;
-}
-
-.social-logo {
-	max-height: 50px !important;
-	max-width: 50px !important;
-	margin-top: -15px;
 }
 
 /* Men's National Team Page CSS*/
