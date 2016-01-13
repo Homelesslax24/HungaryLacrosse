@@ -1,8 +1,6 @@
 To Do:
 	Home Page
-		Fix Landing
-			Slightly grey picture
-			Fix font and color
+		Fix Font
 		Move Facebook script out of application and make it only appear on the home page (loaded just inside the body tag)
 		Add Admin accounts/Activeadmin
 		Make posts populate dynamically
