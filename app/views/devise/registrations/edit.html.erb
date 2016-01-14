@@ -1,142 +1,39 @@
-<div class="container col-md-6 col-md-offset-3 first-item">
-  <div class="panel panel-default">
-    
-    <div class="panel-heading">
-      <h1><%= image_tag @user.avatar.url(:thumb), class: "account-avatar" %>Edit <%= resource_name.to_s.humanize %> - <%= current_user.firstname %> <%= current_user.lastname %>
-      </h1>
-    </div>
+<h2>Edit <%= resource_name.to_s.humanize %></h2>
 
-    <div class="panel-body">
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= devise_error_messages! %>
 
-      <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-        <%= devise_error_messages! %>
-        
-        <div class="form-inline">  <!-- Name Form -->
-          <div class="form-group form-group-name" >
-            <%= f.label "Last Name" %><br />
-            <%= f.text_field :lastname, autofocus: true, class: "form-control", id: "form-full-width" %>
-          </div>
-
-          <div class="form-group form-group-name">
-            <%= f.label "First Name" %><br />
-            <%= f.text_field :firstname, autofocus: true, class: "form-control", id: "form-full-width" %>
-          </div>
-
-          <div class="form-group form-group-mi">
-            <%= f.label "MI" %><br />
-            <%= f.text_field :mi, autofocus: true, class: "form-control", id: "form-full-width" %>       
-          </div>
-        </div>
-
-        <div class="form-inline">  <!-- Contact Info -->
-          <div class="form-group form-group-three-line">
-            <%= f.label :email %><br />
-            <%= f.email_field :email, autofocus: true, class: "form-control", id: "form-full-width" %>
-          </div>
-
-          <div class="form-group form-group-three-line">
-            <%= f.label "Phone Number" %><br />
-            <%= f.phone_field :phonenumber, autofocus: true, class: "form-control", id: "form-full-width"%>
-          </div>  
-
-          <div class="form-group form-group-three-line-end">
-            <%= f.label :birthday %><br />
-            <%= f.date_field :birthday, autofocus: true, class: "form-control", id: "form-full-width" %>
-          </div>
-
-          <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-            <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-          <% end %>
-        </div>
-
-        <div class="form-group">  <!-- Avatar -->
-          <%= f.label :avatar %><br />
-          <%= f.file_field :avatar, class: "form-control" %>
-        </div>
-
-        <hr class="form-rule">
-
-        <div class="form-inline">  <!-- Address Form -->
-          <div class="form-group form-group-address">
-            <%= f.label :address %><br />
-            <%= f.text_field :address, autofocus: true, class: "form-control", id: "form-full-width" %>
-          </div>
-
-          <div class="form-group form-group-apt">
-            <%= f.label :apt %><br />
-            <%= f.text_field :apt, autofocus: true, class: "form-control", id: "form-full-width" %>
-          </div>
-
-          <div class="form-group form-group-three-line">
-            <%= f.label :city %><br />
-            <%= f.text_field :city, autofocus: true, class: "form-control", id: "form-full-width" %>
-          </div>
-
-          <div class="form-group form-group-three-line">
-            <%= f.label :state %><br />
-            <%= f.text_field :state, autofocus: true, class: "form-control", id: "form-full-width" %>
-          </div>
-
-          <div class="form-group form-group-three-line-end">
-            <%= f.label :zipcode %><br />
-            <%= f.number_field :zipcode, autofocus: true, class: "form-control", id: "form-full-width" %>
-          </div>
-        </div>
-
-        <hr class="form-rule">
-
-        <div class="form-inline">  <!-- US Lacrosse Info -->
-          <div class="form-group form-group-two-line">
-            <%= f.label "US Lacrosse Member Number" %><br />
-            <%= f.number_field :uslnumber, autofocus: true, class: "form-control", id: "form-full-width" %>
-          </div>
-
-          <div class="form-group form-group-two-line-end">
-            <%= f.label "US Lacrosse Number Expiration Date" %><br />
-            <%= f.date_field :uslexpdate, autofocus: true, class: "form-control", id: "form-full-width" %>
-          </div>
-          <p class="center"><%= link_to "Click here to get one", "https://usl.ebiz.uapps.net/PersonifyEbusiness/Default.aspx?TabID=340&_ga=1.152457785.1872589890.1441135307"%> |
-          <%= link_to "Click here to look it up", "https://usl.ebiz.uapps.net/PersonifyEbusiness/Default.aspx?TabID=266&_ga=1.54883627.1872589890.1441135307" %></p>
-        </div>
-
-        <hr class="form-rule">
-
-        <div class="form-inline">  <!-- Password Change -->
-          <div class="form-group form-group-two-line">
-            <%= f.label :password %> <br />
-            <%= f.password_field :password, autocomplete: "off", class: "form-control", id: "form-full-width"  %>
-          </div>
-
-          <div class="form-group form-group-two-line-end">
-            <%= f.label :password_confirmation %><br />
-            <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", id: "form-full-width"  %>
-          </div>
-          <i class="center">(leave blank if you don't want to change it)</i>
-        </div>
-
-        <div class="form-group">  <!-- Current Password -->
-          <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-          <%= f.password_field :current_password, autocomplete: "off", class: "form-control" %>
-        </div>
-
-        <div class="form-group">
-          <%= f.submit "Update", class: "btn btn-primary" %>
-        </div>
-      <% end %>
-    </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %>
   </div>
 
-  <div class="panel panel-default">
-    <div class="panel-heading">  
-      <h3>Cancel my account</h3>
-    </div>
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% end %>
 
-    <div class="panel-body">  
-      <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-danger" %></p>
-    </div>
-
-    <div class="panel-footer">
-      <%= link_to "Back", :back %>
-    </div>
+  <div class="field">
+    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+    <%= f.password_field :password, autocomplete: "off" %>
   </div>
-</div>  
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+    <%= f.password_field :current_password, autocomplete: "off" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Update" %>
+  </div>
+<% end %>
+
+<h3>Cancel my account</h3>
+
+<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+
+<%= link_to "Back", :back %>
