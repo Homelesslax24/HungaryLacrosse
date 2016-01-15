@@ -3,6 +3,7 @@ To Do:
 		Fix Font
 		Move Facebook script out of application and make it only appear on the home page (loaded just inside the body tag)
 		Add Admin accounts/Activeadmin
+			-Add Created_by column to Admin_users
 		Make posts populate dynamically
 		Make events populate dynamically
 		Make teams populate dynamically
