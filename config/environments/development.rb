@@ -14,12 +14,13 @@ Rails.application.configure do
   config.action_controller.perform_caching = false
 
   config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.perform_deliveries = true
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   ActionMailer::Base.delivery_method = :smtp
   ActionMailer::Base.smtp_settings = {
     :address => "localhost",
     :port => 1025,
-    :domain => "everydayrails.com" }
+    :domain => "lacrosse.hu" }
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
