@@ -1,22 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Hungarian Lacrosse Association | The Official Site of Lacrosse in Hungary</title>
+    <title>Hungarian Lacrosse Association | <%= yield :title || "The Official Site of Lacrosse in Hungary" %></title>
+    <%= yield :head_top %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%= yield :head_end %>
   </head>
   <body>
-    <div id="fb-root"></div> <!-- XXXX Need to move this to only call it on the home page -->
-      <script>(function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));</script> <!-- end move section -->
-
+    <%= yield :body_top %>
+    
   	<div>
   		<%= render 'layouts/header' %>
   	</div>
@@ -35,6 +30,7 @@
     </div>
   		
   	<%= render 'layouts/footer' %>
-  		
+  	
+    <%= yield :body_end %>	
   </body>
 </html>

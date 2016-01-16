@@ -1,6 +1,19 @@
+<% title "Men's National Team" %>
+<% content_for :head_top do %>
+	<meta charset="UTF-8">
+	<meta name="description" content="Staff and Roster for the Mens National Team">
+	<meta name="keywords" content="National, Team, Hungary, Coaches, Players, Roster"
+<% end %>
+<% content_for :head_end do %>
+<% end %>
+<% content_for :body_top do %>
+<% end %>
+<% content_for :body_end do %>
+<% end %>
+
 <div class="container">
 	<div class="jumbotron" id="mensnationalteam">
-		<h2 class="center">Hungarian Men's National Team</h2>
+		<h2 class="center"><%= yield(:title) %></h2>
 		<div class="row"> <!-- Staff -->
 			<hr>
 			<h3 class="center"><strong>Staff</strong></h3>

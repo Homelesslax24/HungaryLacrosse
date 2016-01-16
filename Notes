@@ -1,9 +1,11 @@
 To Do:
+	Fix where #s send you on the page on every page
+
 	Home Page
 		Fix Font
-		Move Facebook script out of application and make it only appear on the home page (loaded just inside the body tag)
 		Add Admin accounts/Activeadmin
 			-Add Created_by column to Admin_users
+			-Prevent users from editing/deleting each other
 		Make posts populate dynamically
 		Make events populate dynamically
 		Make teams populate dynamically
@@ -12,10 +14,10 @@ To Do:
 
 	National Team page
 		Make Staff populate dynamically
-		Make Players populate dynamically
+		Make Players populate dynamically	
 
-	Before we share:
-		Fix EC2016 image		
+	Association
+		Make Board table look more centered vs title
 
 	3rd draft:
 		Parallax background scrolling for third page?	

@@ -1,3 +1,26 @@
+<% title "The Official Site of Lacrosse in Hungary" %>
+
+<% content_for :head_top do %>
+	<meta charset="UTF-8">
+	<meta name="description" content="The Hungarian Lacrosse Association is the national governing body for lacrosse in Hungary.  Our goal is to grow and develop lacrosse, in all its forms, in Hungary by providing programs that ensure opportunities exist for individuals to participate and excel in the sport of lacrosse.">
+	<meta name="keywords" content="Hungary, Lacrosse, Association, News, Teams, Events, Sponsors"
+<% end %>
+<% content_for :head_end do %>
+<% end %>
+<% content_for :body_top do %>
+	<div id="fb-root"></div> <!-- XXXX Need to move this to only call it on the home page -->
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script> <!-- end move section -->	
+<% end %>
+<% content_for :body_end do %>
+<% end %>
+
+
 <div class="jumbotron header-full"> <!-- Header -->
 	<div class="col-xs-12 col-md-5 col-md-offset-7">
 		<h1 class="cursive secondary-color", id="main-title">Hungarian Lacrosse Association</h1>

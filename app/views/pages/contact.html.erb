@@ -1,10 +1,23 @@
-<div class="container">
-	<div class="jumbotron center", id="contact">
+<% title "Contact Us" %>
+
+<% content_for :head_top do %>
+	<meta charset="UTF-8">
+	<meta name="description" content="Want to help? Interested in a sponsorship? This is the easiest way to contact us.">
+	<meta name="keywords" content="Contact, Sponsor"
+<% end %>
+<% content_for :head_end do %>
+<% end %>
+<% content_for :body_top do %>
+<% end %>
+<% content_for :body_end do %>
+
+<% end %><div class="container">
+	<div class="col-xs-12 col-md-8 col-md-offset-2 jumbotron center", id="contact">
 		<h2>Contact Us</h2>
 		<h3>Want to Join? Interested in a Sponsorship? Drop us a line.</h3>
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-12 col-lg-6 col-lg-offset-3">
+				<div class="col-xs-12 col-lg-10 col-lg-offset-1">
 					<%= render 'contacts/new' %>
 				</div>	
 			</div>	
