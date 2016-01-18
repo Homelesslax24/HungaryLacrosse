@@ -57,7 +57,7 @@ GEM
     arbre (1.0.3)
       activesupport (>= 3.0.0)
     arel (6.0.3)
-    autoprefixer-rails (6.2.3)
+    autoprefixer-rails (6.3.1)
       execjs
       json
     aws-sdk (1.66.0)
@@ -76,6 +76,7 @@ GEM
       thor (~> 0.19)
     builder (3.2.2)
     byebug (8.2.1)
+    cancancan (1.13.1)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.8)
@@ -268,6 +269,7 @@ DEPENDENCIES
   aws-sdk (~> 1)
   bootstrap-sass
   byebug
+  cancancan (~> 1.10)
   coffee-rails (~> 4.1.0)
   devise (~> 3.5.2)
   jbuilder (~> 2.0)

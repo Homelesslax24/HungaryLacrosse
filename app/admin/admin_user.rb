@@ -1,5 +1,5 @@
 ActiveAdmin.register AdminUser do
-
+  before_filter :authenticate_admin_user!
 
   index do
     column :email
@@ -9,19 +9,21 @@ ActiveAdmin.register AdminUser do
     actions
   end
 
-  # show do
-  #   column :id
-  #   column :email
-  #   column :sign_in_count
-  #   column :current_sign_in_at
-  #   column :last_sign_in_at
-  #   column :current_sign_in_ip
-  #   column :last_sign_in_ip
-  #   column :created_at
-  #   column :updated_at
-  #   column :confirmed_at
-  #   column :onfirmation_sent_at
-  # end
+  show do
+    attributes_table do
+      row :id
+      row :email
+      row :sign_in_count
+      row :current_sign_in_at
+      row :last_sign_in_at
+      row :current_sign_in_ip
+      row :last_sign_in_ip
+      row :created_at
+      row :updated_at
+      row :confirmed_at
+      row :confirmation_sent_at
+    end
+  end
 
 
   form do |f|
@@ -43,6 +45,6 @@ ActiveAdmin.register AdminUser do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
-	permit_params :email, :password, :password_confirmation
+	permit_params :id, :email, :password, :password_confirmation
 	
 end
