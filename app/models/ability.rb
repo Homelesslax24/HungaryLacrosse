@@ -5,8 +5,13 @@ class Ability
 
   def initialize(admin_user)
   	can :read, :all
-    can :manage, AdminUser, :id => admin_user.id
-
+		if admin_user.super_admin == true
+  		can :manage, :all
+  		can :create, :all
+  	else		
+	    can :manage, AdminUser, :id => admin_user.id
+	    can :read, actions, [:show]
+	  end
   end
 
 end
