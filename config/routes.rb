@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   root "pages#home"
 
   resources "contacts", only: [:new, :create]
+  resources "articles"
 
   get "news", to: "pages#news"
   get "eligibility", to: "pages#eligibility"

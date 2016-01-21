@@ -3,7 +3,7 @@ ActiveAdmin.register AdminUser do
 
 # Hides the "New Admin User" Button for non-Super_Admins XXXX Need to make this work correctly
   # @current_admin_user = current_admin_user
-  # if cannot? :create, :all
+  # if(current_admin_user.super_admin?)
   #   actions :all, :except => [:new]
   # else
   #   actions :all

@@ -1,5 +1,5 @@
 class AdminUser < ActiveRecord::Base
-  load_resource
+  has_many :articles
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :confirmable,
