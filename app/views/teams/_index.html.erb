@@ -1,0 +1,13 @@
+<div class="jumbotron center no-margin-top", id="teams"> <!-- Teams -->
+	<h2 class="section-title">Teams</h2>
+	<div class="container-fluid">
+		<div class="jumbotron col-xs-12">
+			<% @teams.each do |team| %>
+				<div class="col-xs-12 col-md-6">
+					<%= link_to image_tag(team.image.url, :alt => team.name + "Logo"), team.website, {class: "hvr-float-shadow team-logo", target: "_blank"} %>
+					<h3 class="team-name"><%= team.name %></h3>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</div>

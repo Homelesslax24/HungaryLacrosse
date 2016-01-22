@@ -8,10 +8,13 @@ class Ability
 		if admin_user.super_admin == true
   		can :manage, AdminUser
       can :manage, Article
+      can :manage, Team
   	else		
-	    can :manage, AdminUser, :id => admin_user.id
+      # Check variations of the AdminUser (update,destroy)
+	    can :manage, AdminUser, :id => admin_user.id 
       can :manage, Article, :admin_user_id => admin_user.id
       can :create, Article
+      can :manage, Team
 	  end
   end
 

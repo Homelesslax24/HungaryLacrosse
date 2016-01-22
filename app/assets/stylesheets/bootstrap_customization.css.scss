@@ -143,7 +143,7 @@ textarea {
 #news .jumbotron {
 	margin-bottom: 15px;
 	max-height: 800px;
-	padding: 0;
+	padding: 0 5px 0 0;
 }
 
 #social-news {
@@ -205,6 +205,10 @@ textarea {
 	float:left;
 }
 
+.post-title-show {
+	display:inline-block;
+}
+
 .post-body-show {
 	display: inline-block;
 }
@@ -223,8 +227,8 @@ textarea {
 
 .post-img-main {
 	max-height: 400px;
+	max-width: 500;
 	width: auto;
-	max-width: 600;
 	padding-right: 20px;
 	float: left;
 }
@@ -285,6 +289,14 @@ textarea {
 	background-color: #ddd;
 	padding-top: 15px;
 	padding-bottom: 15px;
+}
+
+#teams .jumbotron {
+	padding-bottom: 0;
+}
+
+.team-name {
+	margin-bottom: 40px;
 }
 
 .sponsor-logo {

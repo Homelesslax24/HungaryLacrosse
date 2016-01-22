@@ -1,4 +1,4 @@
-ActiveAdmin.register Article do
+ActiveAdmin.register Article, as: "News" do
 
 	controller do
 		def create
@@ -15,7 +15,7 @@ ActiveAdmin.register Article do
 	  private
 
 	  	def article_params
-		    params.require(:article).permit(:title, :subtitle, :text, :hu, :en, :published, :published_at)
+		    params.require(:article).permit(:title, :subtitle, :text, :hu, :en, :published, :published_at, :featured_image, :keywords)
 		  end
 
 	end  
@@ -39,11 +39,11 @@ ActiveAdmin.register Article do
 			row :subtitle
 			row :text
 			row :featured_image
+			row :keywords
 			row :hu, label: "Hungarian"
 			row :en, as: "English"
 			row :created_at
 			row :updated_at, as: "Last Update"
-
 		end
 	end
 
@@ -52,7 +52,8 @@ ActiveAdmin.register Article do
 	      f.input :title
 	      f.input :subtitle
 	      f.input :text
-	      # f.input :featured_image
+	      f.input :keywords
+	      f.input :featured_image
 		    f.input :published_at
 		    f.input :published
 	      f.input :hu, label: "Hungarian"
@@ -65,7 +66,7 @@ ActiveAdmin.register Article do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
-	permit_params :title, :subtitile, :text, :hu, :en, :published, :published_at, :featured_image
+	permit_params :title, :subtitile, :text, :hu, :en, :published, :published_at, :featured_image, :keywords
 #
 # or
 #

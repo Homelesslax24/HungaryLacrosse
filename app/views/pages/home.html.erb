@@ -28,23 +28,8 @@
 	<!-- Removed until login is required
 	<%= render 'pages/welcome_buttons' unless user_signed_in? %> -->
 </div>
-<%= render "/articles/index.html.erb" %>
-<div class="jumbotron center no-margin-top", id="teams"> <!-- Teams -->
-	<h2 class="section-title">Teams</h2>
-	<div class="container-fluid">
-		<div class="jumbotron col-xs-12">
-			<div class="col-lg-6">
-				<!-- Ultimately want to do this dynamically from a database XXXX-->
-					<%= link_to image_tag("budapestblaxlacrosse.png", :alt => "Budapest Blax"), "http://www.budapestblax.com", {class: "hvr-float-shadow team-logo", target: "_blank"} %>
-					<h3>Budapest Blax Lacrosse</h3>
-			</div>
-			<div class="col-lg-6">
-				<%= link_to image_tag("blackberrieslacrosse.png", :alt => "Blackberries"), "http://www.blackberries.hu", {class: "hvr-float-shadow team-logo", target: "_blank"} %>
-				<h3>Budapest Blackberries Lacrosse</h3>
-			</div>
-		</div>
-	</div>
-</div>
+<%= render "/articles/index.html.erb" %><!-- News -->
+<%= render "/teams/index.html.erb" %><!-- Teams -->
 <div class="jumbotron center no-margin-top", id="events"> <!-- Events -->
 	<!-- This will ultimately be populated dynamically -->
 	<h2 class="section-title">Upcoming Events</h2>

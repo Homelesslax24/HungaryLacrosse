@@ -1,4 +1,4 @@
-ActiveAdmin.register AdminUser do
+ActiveAdmin.register AdminUser, as: "Admins" do
   before_filter :authenticate_admin_user!
 
 # Hides the "New Admin User" Button for non-Super_Admins XXXX Need to make this work correctly

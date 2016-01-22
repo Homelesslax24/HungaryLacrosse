@@ -3,7 +3,7 @@
 <% content_for :head_top do %>
 	<meta charset="UTF-8">
 	<meta name="description" content=<%= @article.subtitle %>>
-	<meta name="keywords" content="">
+	<meta name="keywords" content=<%= @article.keywords %>>
 <% end %>
 <% content_for :head_end do %>
 <% end %>
@@ -14,14 +14,14 @@
 
 <div class="container">
 	<div class="jumbotron" id="show-article">
-		<div class="post-title">
+		<div class="row col-xs-12 post-title-show">
 			<h2><%= @article.title %></h2>
 			<h4><%= @article.subtitle %></h4>
 			<h6>Published <%= l(@article.published_at, :format=>:article_date) %> <%= l(@article.published_at, :format=>:article_year) %></h6>
 			<hr>
 		</div>
 		<div class="row">
-			<%= image_tag("hungarycamp2014.jpg", :alt => "Hungary Training Camp", class:"post-img-main-show") %> <!-- dynamic xxxx -->
+			<%= image_tag(@article.featured_image.url, :alt => truncate(@article.title, limit: 20, :separator => ' ') + "image", class:"post-img-main-show") %>
 			<p class="post-body"><%= @article.text %><p>
 		</div>
 	</div>

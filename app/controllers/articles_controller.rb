@@ -28,7 +28,7 @@ class ArticlesController < ApplicationController
     # Use strong_parameters for attribute whitelisting
     # Be sure to update your create() and update() controller methods.
 
-    def user_params
+    def article_params
       params.require(:article).permit(:featured_image)
     end
 
