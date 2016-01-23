@@ -27,3 +27,4 @@ en:
     formats:
       article_date: "%d %b"
       article_year: "%Y"
+      event_date: "%d %b %Y"

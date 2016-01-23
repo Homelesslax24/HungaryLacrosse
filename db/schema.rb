@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160122215331) do
+ActiveRecord::Schema.define(version: 20160123183631) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -67,6 +67,20 @@ ActiveRecord::Schema.define(version: 20160122215331) do
     t.integer  "featured_image_file_size"
     t.datetime "featured_image_updated_at"
     t.string   "keywords"
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string   "name"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.string   "website"
+    t.text     "text"
+    t.boolean  "published"
+    t.boolean  "hu"
+    t.boolean  "en"
+    t.integer  "admin_user_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "teams", force: :cascade do |t|

@@ -1,0 +1,26 @@
+<div class="jumbotron center no-margin-top", id="events"> 
+	<h2 class="section-title">Upcoming Events</h2>
+	<div class="container-fluid">
+		<% @events.each do |event| %>
+			<div class="col-xs-12 event-post">
+				<div class="jumbotron col-xs-12">
+					<div class="col-xs-12 col-md-5">
+						<%= link_to image_tag("nyc.jpg", :alt => "New Years Cup", class:"event-img-main"), event.website %>
+					</div>
+					<div class="col-xs-12 col-md-7">
+						<div class="row event-header">
+							<h2><%= link_to event.name, event.website %></h2>
+							<h4><%= l(event.start_date, :format=>:event_date) %> - <%= l(event.end_date, :format=>:event_date) %></h4>
+							<hr>
+						</div>
+						<div class="row event-text">
+							<p><%= event.text %><p>
+
+							<%= link_to "Click here to find out more about the " + event.name, event.website %>	
+						</div>	
+					</div>	
+				</div>
+			</div>	
+		<% end %>
+	</div>	
+</div>

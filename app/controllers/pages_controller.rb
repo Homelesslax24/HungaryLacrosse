@@ -8,6 +8,9 @@ class PagesController < ApplicationController
 
 		#Supports Team functionality on the home page
 		@teams = Team.all.order("name ASC")
+
+		#Supports Events functionality on the home page
+		@events = Event.all.order("start_date ASC").where(:published => true).limit(2)
 	end
 
 	def show

@@ -1,15 +1,14 @@
 To Do:
 	Fix where #s send you on the page on every page
 	Check out day 15 lesson 2 enforcing strong passwords
+	Add backgrounds
 
 	Home Page
 		Fix Font
 		Add Admin accounts/Activeadmin
-			-Add Created_by column to Admin_users
 			-Remove "New Admin User" button for non-Super_Admins
 			-Make index show email, not user id
 		Make events populate dynamically
-		Make teams populate dynamically
 		Make sponsors populate dynamically 
 		Update responsiveness of news and events
 
@@ -21,9 +20,12 @@ To Do:
 		Make Board table look more centered vs title
 
 	Next draft:
+		Admin Filters
+			-Make it use emails, not the wierd hash thing
 		Posts
 			-add next/last article functionality to article.show
 			-Make post titles show instead of id in address bar
+			-Add wysiwyg to text so articles format nicely
 		Parallax background scrolling for third page?	
 		lacrosse.hu/en/... for all english.  Add switcher icons.
 			for flash language switch, see http://guides.rubyonrails.org/i18n.html#adding-date-time-formats and scroll up
