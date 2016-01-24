@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160123183631) do
+ActiveRecord::Schema.define(version: 20160123195556) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -79,8 +79,12 @@ ActiveRecord::Schema.define(version: 20160123183631) do
     t.boolean  "hu"
     t.boolean  "en"
     t.integer  "admin_user_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.string   "featured_image_file_name"
+    t.string   "featured_image_content_type"
+    t.integer  "featured_image_file_size"
+    t.datetime "featured_image_updated_at"
   end
 
   create_table "teams", force: :cascade do |t|

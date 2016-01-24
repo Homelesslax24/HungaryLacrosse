@@ -15,7 +15,7 @@ ActiveAdmin.register Event do
 	  private
 
 	  	def event_params
-		    params.require(:event).permit(:name, :website, :start_date, :end_date, :text, :published, :en, :hu)
+		    params.require(:event).permit(:name, :website, :start_date, :end_date, :text, :published, :en, :hu, :featured_image)
 		  end
 
 	end  
@@ -34,13 +34,6 @@ ActiveAdmin.register Event do
 
 	# show do
 	# 	attributes_table do
-	# 		row :name
-	# 		row :website
-	# 		row :men
-	# 		row :women
-	# 		row :boys
-	# 		row :girls
-	# 		row :image
 	# 	end
 	# end
 
@@ -51,6 +44,7 @@ ActiveAdmin.register Event do
       f.input :start_date
       f.input :end_date
 			f.input :text
+			f.input :featured_image
 			f.input :published
 			f.input :en
 			f.input :hu
@@ -58,6 +52,6 @@ ActiveAdmin.register Event do
     f.actions
   end
 
-	permit_params :name, :website, :start_date, :end_date, :text, :published, :en, :hu
+	permit_params :name, :website, :start_date, :end_date, :text, :published, :en, :hu, :featured_image
 
 end
