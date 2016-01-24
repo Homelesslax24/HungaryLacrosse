@@ -20,11 +20,5 @@ class PagesController < ApplicationController
 		@article = Article.find_by(id: params[:id])
 	end
 
-  private
-
-	  # def article_params
-	  #   params.require(:article).permit(:title, :subtitle, :text, :hu, :en)
-	  # end
-
 end
 

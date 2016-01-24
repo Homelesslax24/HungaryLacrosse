@@ -8,8 +8,6 @@ To Do:
 		Add Admin accounts/Activeadmin
 			-Remove "New Admin User" button for non-Super_Admins
 			-Make index show email, not user id
-		Make events populate dynamically
-		Make sponsors populate dynamically 
 		Update responsiveness of news and events
 
 	National Team page

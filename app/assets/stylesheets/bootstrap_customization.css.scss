@@ -1,9 +1,9 @@
 /* Sitewide Fonts, Bootstrap, and CSS */
-@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,900);
 
 $body-bg: 															#bdc3c7;
 $jumbotron-bg: 													white;
-$font-family-sans-serif:                'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family-sans-serif:                'Lato', Helvetica, Arial, sans-serif;
 $font-size-base:												12px;
 $font-size-h2:													3.5em;
 
@@ -38,14 +38,24 @@ h3 {
 
 th {
 	text-align: center;
+	font-size: 16px;
+	font-weight: 900;
+}
+
+td {
+	font-size: 16px;
 }
 
 textarea { 
 	resize: none; 
 }
 
-.cursive {
-	font-family: 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+.light {
+	font-weight: 300;
+}
+
+.heavy {
+	font-weight: 900;
 }
 
 .primary-color {
@@ -81,6 +91,7 @@ textarea {
 .section-title {
 	color: #fff;
 	margin-bottom: 40px;
+	font-weight: 900;
 }
 
 /* Shared CSS*/
@@ -108,7 +119,7 @@ textarea {
 }
 
 #eligibility, #mensnationalteam, #association p {
-	font-size: 14px;
+	font-size: 18px;
 }
 
 /* Navbar and Header CSS*/
@@ -294,13 +305,14 @@ textarea {
 
 #teams .jumbotron {
 	padding-bottom: 0;
+	margin-bottom: 0;
 }
 
 .team-name {
 	margin-bottom: 40px;
 }
 
-.sponsor-logo {
+.team-logo {
 	margin-top: 25px;
 	margin-bottom: 0px;
 }
@@ -312,9 +324,18 @@ textarea {
 	padding-bottom: 15px;
 }
 
+#sponsors .jumbotron {
+	padding-bottom: 40px;
+	margin-bottom: 0;
+}
+
 .sponsor-logo {
 	margin-top: 25px;
-	margin-bottom: 75px;
+}
+
+.sponsor-item {
+	height: 200px;
+	margin-bottom: 25px;
 }
 
 /* Men's National Team Page CSS*/
