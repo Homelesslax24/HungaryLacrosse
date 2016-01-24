@@ -11,6 +11,9 @@ class PagesController < ApplicationController
 
 		#Supports Events functionality on the home page
 		@events = Event.all.order("start_date ASC").where(:published => true).limit(2)
+
+		#Supports Events functionality on the home page
+		@sponsors = Sponsor.all.order("priority ASC").where(:published => true)
 	end
 
 	def show

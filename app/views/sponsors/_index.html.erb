@@ -1,0 +1,12 @@
+<div class="jumbotron center no-margin-top", id="sponsors">
+	<h2 class="section-title">Support our Sponsors</h2>
+	<div class="container-fluid">
+		<div class="col-xs-12 jumbotron">
+			<% @sponsors.each do |sponsor| %>
+				<div class="col-xs-12 col-md-6 col-lg-4 sponsor">
+						<%= link_to image_tag(" ", :alt => sponsor.name + " Logo"), sponsor.website, {class: "hvr-float-shadow sponsor-logo", target: "_blank"} %>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</div>

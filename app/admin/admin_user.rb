@@ -27,8 +27,6 @@ ActiveAdmin.register AdminUser, as: "Admins" do
     column :last_sign_in_at
     column :sign_in_count
     actions
-    puts "amy look down one line"
-    puts current_admin_user.super_admin == true
   end
 
   # Prescribes the filters available on the Index view
@@ -68,9 +66,6 @@ ActiveAdmin.register AdminUser, as: "Admins" do
     f.actions
   end
   
-# See permitted parameters documentation:
-# https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
-#
 	permit_params :id, :email, :password, :password_confirmation, :super_admin
 	
 end

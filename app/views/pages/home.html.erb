@@ -31,32 +31,4 @@
 <%= render "/articles/index.html.erb" %><!-- News -->
 <%= render "/teams/index.html.erb" %><!-- Teams -->
 <%= render "/events/index.html.erb" %><!-- Events -->
-<div class="jumbotron center no-margin-top", id="sponsors"> <!-- Sponsors -->
-	<h2 class="section-title">Support our Sponsors</h2>
-	<div class="container-fluid">
-		<div class="col-xs-12 jumbotron">
-			<div class="row">
-				<div class="col-lg-4">
-						<%= link_to image_tag("heros-logo_1.gif", :alt => "Heros Lacrosse"), "http://www.heroslacrosse.com", {class: "hvr-float-shadow sponsor-logo", target: "_blank"} %>
-				</div>
-				<div class="col-lg-4">
-						<%= link_to image_tag("sj-logo-yellow3.jpg", :alt => "Stan and Joe's"), "http://www.stanandjoessaloon.com", {class: "hvr-float-shadow sponsor-logo", target: "_blank"} %>
-				</div>
-				<div class="col-lg-4">
-						<%= link_to image_tag("markedpromotions.png", :alt => "Marked Promotions"), "http://www.markedpromo.com", {class: "hvr-float-shadow sponsor-logo", target: "_blank"} %>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-4">
-						<%= link_to image_tag("sanders_logo.jpg", :alt => "The Sanders Company"), "http://www.thesanderscompany.com", {class: "hvr-float-shadow sponsor-logo", target: "_blank"} %>
-				</div>
-				<div class="col-lg-4">
-						<%= link_to image_tag("townetransport1.png", :alt => "Towne Transport"), "http://www.townetransport.com", {class: "hvr-float-shadow sponsor-logo", target: "_blank"} %>
-				</div>
-				<div class="col-lg-4">
-						<%= link_to image_tag("bayarea3.png", :alt => "Bay Area Disposal"), "http://www.bayareadisposal.com", {class: "hvr-float-shadow sponsor-logo", target: "_blank"} %>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>	
+<%= render "/sponsors/index.html.erb" %><!-- Sponsors -->
