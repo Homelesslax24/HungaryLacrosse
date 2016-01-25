@@ -12,9 +12,9 @@ class Ability
       can :manage, Event
       can :manage, Article
   	else		
-      # Check variations of the AdminUser (update,destroy) xxxx
-	    can :manage, AdminUser, :id => admin_user.id 
-      cam :manage, Event, :admin_user_id => admin_user.id
+	    can :update, AdminUser, :id => admin_user.id 
+      can :destroy, AdminUser, :id => admin_user.id 
+      can :manage, Event, :admin_user_id => admin_user.id
       can :create, Event
       can :manage, Article, :admin_user_id => admin_user.id
       can :create, Article

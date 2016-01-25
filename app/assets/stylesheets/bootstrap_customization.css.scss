@@ -29,7 +29,7 @@ html, body {
 }
 
 body {
-    padding-top: 45px; 
+  padding-top: 45px; 
 }
 
 h3 {
@@ -89,9 +89,11 @@ textarea {
 }
 
 .section-title {
-	color: #fff;
+	text-align: center;
 	margin-bottom: 40px;
 	font-weight: 900;
+	text-transform: uppercase;
+	color: #fff;
 }
 
 /* Shared CSS*/
@@ -122,10 +124,14 @@ textarea {
 	font-size: 18px;
 }
 
+#mensnationalteam .section-title, #contact .section-title, #association .section-title { 
+	color: #000;
+}
+
 /* Navbar and Header CSS*/
 
 .navbar-brand {
-  font-weight: bold;
+  font-weight: 900;
 }
 
 .header-full {
@@ -142,6 +148,7 @@ textarea {
 #main-title {
 	margin-top: 20%;
 	font-size: 600%;
+	text-transform: uppercase;
 }
 
 /* News CSS */
@@ -275,10 +282,7 @@ textarea {
 	margin-bottom: 45px;
 }
 
-#events h2 {
-
-}
-.event-post{
+.event-post {
 	text-align: left;
 }
 
@@ -294,6 +298,15 @@ textarea {
 
 .event-text {
 
+}
+
+#events a {
+	color: #000;
+}
+
+#events a:hover {
+	color: #EC1D25;
+	text-decoration: none;
 }
 
 /* Team CSS */
@@ -339,6 +352,10 @@ textarea {
 }
 
 /* Men's National Team Page CSS*/
+
+#mensnationalteam .section-title {
+	font-size: 2.5em;
+}
 
 #mensnationalteam td {
 	vertical-align: middle;

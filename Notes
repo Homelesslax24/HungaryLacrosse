@@ -4,7 +4,6 @@ To Do:
 	Add backgrounds
 
 	Home Page
-		Fix Font
 		Add Admin accounts/Activeadmin
 			-Remove "New Admin User" button for non-Super_Admins
 			-Make index show email, not user id
@@ -12,12 +11,20 @@ To Do:
 
 	National Team page
 		Make Staff populate dynamically
+			name, title, text, img, teams (M, W, M U19, W U19, Indoor)
 		Make Players populate dynamically	
+			name, number, position, club, text, img, teams (M, W, M U19, W U19, Indoor)
+		Make national teams populate dynamcally and can be added from admin
+			team name belong to/has man players/staff
 
 	Association
-		Make Board table look more centered vs title
+		Make Board members populate dynamically
+			name, title, email
+		Make board emails send email
 
 	Next draft:
+		Hack test that only a super admin can make another super admin - you whitelisted the super admin in params. concern that you cold proxy that in somehow or use the address bar
+		Clean up CSS 
 		Admin Filters
 			-Make it use emails, not the wierd hash thing
 		Posts
@@ -28,7 +35,10 @@ To Do:
 		lacrosse.hu/en/... for all english.  Add switcher icons.
 			for flash language switch, see http://guides.rubyonrails.org/i18n.html#adding-date-time-formats and scroll up
 		Admin "Help" section
+		Association
+			Make Board table look more centered vs title if possible
 
 
 Other potential links/subjects:
 	How to Start a Club?
+	stats for players

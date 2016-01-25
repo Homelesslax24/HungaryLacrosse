@@ -1,23 +1,34 @@
 ActiveAdmin.register AdminUser, as: "Admins" do
   before_filter :authenticate_admin_user!
 
-# Hides the "New Admin User" Button for non-Super_Admins XXXX Need to make this work correctly
-  # @current_admin_user = current_admin_user
-  # if(current_admin_user.super_admin?)
-  #   actions :all, :except => [:new]
-  # else
-  #   actions :all
-  # end
-
 # Allows the Admin_User to edit Admin_Users without changing the password
   controller do
+    # def create
+    #   @adimn_user = current_admin_user.admin_user.build(admin_user_params)
+      
+    #   if @admin_user.save 
+    #     flash[:success] = "Your admin user was created successfully!"
+    #     redirect_to admin_admin_users_path
+    #   else
+    #     render action: 'new'
+    #   end  
+    # end  
+
     def update
+      # @admin_user = current_admin_user.admin_user.update(admin_user_params)
+
       if params[:admin_user][:password].blank?
         params[:admin_user].delete("password")
         params[:admin_user].delete("password_confirmation")
       end
       super
     end
+
+    private
+
+      def admin_user_params
+        params.require(:admin_user).permit(:email, :password, :password_confirmation, :super_admin)
+      end
   end
 
 # Prescribes the columns for the Index view
@@ -61,11 +72,13 @@ ActiveAdmin.register AdminUser, as: "Admins" do
       f.input :email
       f.input :password
       f.input :password_confirmation
-      f.input :super_admin
+      if current_admin_user.super_admin == true
+        f.input :super_admin
+      end  
     end
     f.actions
   end
   
-	permit_params :id, :email, :password, :password_confirmation, :super_admin
+	permit_params :email, :password, :password_confirmation, :super_admin
 	
 end
