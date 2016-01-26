@@ -16,8 +16,14 @@ class PagesController < ApplicationController
 		@sponsors = Sponsor.all.order("priority ASC").where(:published => true)
 	end
 
+	def nationalteam
+		#Supports Staff functionality on the national team page(s)
+		@staffs = Staff.all
+	end
+
 	def show
 		@article = Article.find_by(id: params[:id])
+		@staff = Staff.find_by(id: params[:id])
 	end
 
 end

@@ -14,31 +14,8 @@
 <div class="container">
 	<div class="jumbotron" id="mensnationalteam">
 		<h2 class="section-title"><%= yield(:title) %></h2>
-		<div class="row"> <!-- Staff -->
-			<hr>
-			<h3 class="center"><strong>Staff</strong></h3>
-			<div class="jumbotron col-xs-12 col-md-6 col-lg-3">
-				<%= image_tag("noimg.png", :alt => "Head Coach", class:"staff-img") %>
-				<h4 class="center"><strong>Ricky Schwartzburg</strong></h4>
-				<h4 class="center">Head Coach</h4>
-			</div>
-			<div class="jumbotron col-xs-12 col-md-6 col-lg-3">
-				<%= image_tag("noimg.png", :alt => "Offensive Coordinator", class:"staff-img") %>
-				<h4 class="center"><strong>Mark Goers</strong></h4>
-				<h4 class="center">Offensive Coordinator</h4>
-			</div>
-			<div class="jumbotron col-xs-12 col-md-6 col-lg-3">
-				<%= image_tag("noimg.png", :alt => "Defensive Coordinator", class:"staff-img") %>
-				<h4 class="center"><strong>Tim Berquist</strong></h4>
-				<h4 class="center">Defensive Coordinator</h4>
-			</div>
-			<div class="jumbotron col-xs-12 col-md-6 col-lg-3">
-				<%= image_tag("noimg.png", :alt => "Team Manager", class:"staff-img") %>
-				<h4 class="center"><strong>Carl Starkey</strong></h4>
-				<h4 class="center">Team Manager</h4>
-			</div>	
-		</div>	
 		<hr>
+		<%= render "/staffs/index.html.erb" %>
 		<div class="row"> <!-- Roster -->
 			<h3 class="center"><strong>Roster</strong></h3>
 			<div class="table-responsive">

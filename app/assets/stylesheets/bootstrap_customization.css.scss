@@ -357,6 +357,16 @@ textarea {
 	font-size: 2.5em;
 }
 
+// This could be a good thing to consolidate across sections
+#mensnationalteam a {
+	color: #000;
+}
+
+#mensnationalteam a:hover {
+	color: #EC1D25;
+	text-decoration: none;
+}
+
 #mensnationalteam td {
 	vertical-align: middle;
 }

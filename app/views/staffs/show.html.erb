@@ -1,0 +1,26 @@
+<% title @staff.title + " - " + @staff.name %>
+
+<% content_for :head_top do %>
+	<meta charset="UTF-8">
+	<meta name="description" content=<%= @staff.title %>>
+	<meta name="keywords" content=" "><!--xxxx fill dynamically (head coach - team name) -->
+<% end %>
+<% content_for :head_end do %>
+<% end %>
+<% content_for :body_top do %>
+<% end %>
+<% content_for :body_end do %>
+<% end %>
+
+<div class="container">
+	<div class="jumbotron" id="show-article">
+		<div class="row col-xs-12 post-title-show">
+			<h2><%= @staff.name%> - <%= @staff.title %></h2>
+			<hr>
+		</div>
+		<div class="row">
+		<%= image_tag('noimg.png', :alt => "xxxx fix this alt text", class:"post-img-main-show") %>
+			<p class="post-body"><%= @staff.text %><p>
+		</div>
+	</div>
+</div>

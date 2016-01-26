@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160124212137) do
+ActiveRecord::Schema.define(version: 20160125210109) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -87,6 +87,16 @@ ActiveRecord::Schema.define(version: 20160124212137) do
     t.datetime "featured_image_updated_at"
   end
 
+  create_table "players", force: :cascade do |t|
+    t.string   "name"
+    t.string   "position"
+    t.integer  "number"
+    t.string   "club"
+    t.text     "text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "sponsors", force: :cascade do |t|
     t.string   "name"
     t.string   "website"
@@ -98,6 +108,14 @@ ActiveRecord::Schema.define(version: 20160124212137) do
     t.string   "logo_content_type"
     t.integer  "logo_file_size"
     t.datetime "logo_updated_at"
+  end
+
+  create_table "staffs", force: :cascade do |t|
+    t.string   "name"
+    t.string   "title"
+    t.text     "text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "teams", force: :cascade do |t|

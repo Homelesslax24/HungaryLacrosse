@@ -1,0 +1,11 @@
+<div class="row"> <!-- Staff -->
+	<h3 class="center"><strong>Staff</strong></h3>
+	<% @staffs.each do |staff| %>
+		<div class="jumbotron col-xs-12 col-md-6 col-lg-3">
+			<%= link_to image_tag("noimg.png", :alt => "Hungary Lacrosse " + staff.title + ", " + staff.name, class:"staff-img"), staff %>
+			<h4 class="center"><strong><%= link_to staff.name, staff%></strong></h4>
+			<h4 class="center"><%= link_to staff.title, staff %></h4>
+		</div>
+	<% end %>
+	<hr>
+</div>

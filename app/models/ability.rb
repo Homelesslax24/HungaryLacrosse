@@ -7,6 +7,8 @@ class Ability
   	can :read, :all
     can :manage, Team
     can :manage, Sponsor
+    can :manage, Staff
+    can :manage, Player
 		if admin_user.super_admin == true
   		can :manage, AdminUser
       can :manage, Event

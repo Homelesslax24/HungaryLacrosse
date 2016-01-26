@@ -1,22 +1,9 @@
 ActiveAdmin.register AdminUser, as: "Admins" do
+
   before_filter :authenticate_admin_user!
 
-# Allows the Admin_User to edit Admin_Users without changing the password
   controller do
-    # def create
-    #   @adimn_user = current_admin_user.admin_user.build(admin_user_params)
-      
-    #   if @admin_user.save 
-    #     flash[:success] = "Your admin user was created successfully!"
-    #     redirect_to admin_admin_users_path
-    #   else
-    #     render action: 'new'
-    #   end  
-    # end  
-
     def update
-      # @admin_user = current_admin_user.admin_user.update(admin_user_params)
-
       if params[:admin_user][:password].blank?
         params[:admin_user].delete("password")
         params[:admin_user].delete("password_confirmation")
