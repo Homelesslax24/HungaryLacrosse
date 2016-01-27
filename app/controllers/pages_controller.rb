@@ -19,11 +19,15 @@ class PagesController < ApplicationController
 	def nationalteam
 		#Supports Staff functionality on the national team page(s)
 		@staffs = Staff.all
+
+		#Supports Player functionality on the national team page(s)
+		@players = Player.all.order("number ASC")
 	end
 
 	def show
 		@article = Article.find_by(id: params[:id])
 		@staff = Staff.find_by(id: params[:id])
+		@player = Player.find_by(id: params[:id])
 	end
 
 end

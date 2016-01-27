@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources "contacts", only: [:new, :create]
   resources "articles", only: [:index, :show]
   resources "staffs", only: [:index, :show]
+  resources "players", only: [:index, :show]
 
   get "news", to: "pages#news"
   get "eligibility", to: "pages#eligibility"
