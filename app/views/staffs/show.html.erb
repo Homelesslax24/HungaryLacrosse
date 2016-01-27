@@ -19,7 +19,7 @@
 			<hr>
 		</div>
 		<div class="row">
-		<%= image_tag('noimg.png', :alt => "xxxx fix this alt text", class:"post-img-main-show") %>
+		<%= image_tag(@staff.image.url, :alt => "Hungary Lacrosse " + @staff.title + ", " + @staff.name, class:"post-img-main-show") %>
 			<p class="post-body"><%= @staff.text %><p>
 		</div>
 	</div>

@@ -12,11 +12,12 @@ ActiveAdmin.register Staff do
     f.inputs "Staff" do
       f.input :name
       f.input :title
+      f.input :image
       f.input :text
     end
     f.actions
   end
 
-	permit_params :name, :title, :text
+	permit_params :name, :title, :text, :image
 
 end
