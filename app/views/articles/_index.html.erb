@@ -6,7 +6,7 @@
 				<% @articles.each do |article| %>
 					<div class="col-xs-12 news-item">
 						<div class="jumbotron col-xs-12 left">
-							<%= link_to(image_tag(article.featured_image.url, :alt => truncate(article.title, length: 10) + "image", class:"post-img-main"), article) %> <!-- Needs to be dynamic XXXX -->
+							<%= link_to(image_tag(article.featured_image.url, :alt => truncate(article.title, length: 10) + "image", class:"post-img-main"), article) %>
 							<h2><%= link_to article.title, article %></h2>
 							<h4><%= article.subtitle %></h4>
 							<h6 class="light"><%= l(article.published_at, :format=>:article_date) %> <%= l(article.published_at, :format=>:article_year) %></h6>
@@ -16,10 +16,12 @@
 						</div>	
 					</div>	
 				<% end %>
+				<% if @more_articles %>
+					<div class="col-xs-12 jumbotron">
+						<h4 class="archive-link"><%= link_to "See All Past Articles", articles_path %></h4>
+					</div>
+				<% end %>	
 			</div>
-			<% if @more_articles %>
-				<p class="center"><%= link_to "See All Past Articles", articles_path %></p>
-			<% end %>	
 		</div>	
 		<div class="col-xs-12 col-md-3" id="social-news">	<!-- Social News Feed -->
 			<div class="container-fluid primary-color left">

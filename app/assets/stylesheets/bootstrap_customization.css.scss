@@ -142,7 +142,7 @@ textarea {
 	border-bottom: 4px solid;
 	// background-image: image-url("header_background.jpg");
 	// background-size: cover;
-  // background-repeat: no-repeat;
+ //  background-repeat: no-repeat;
 }
 
 #main-title {
@@ -156,6 +156,9 @@ textarea {
 	background-color: #ddd;
 	padding-top: 15px;
 	padding-bottom: 15px;
+	background-image: image-url("gameday_001.jpg");
+	background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #news .jumbotron {
@@ -264,6 +267,9 @@ textarea {
     right: 10px;
 }
 
+.archive-link {
+	padding: 20px;
+}
 /* Upcoming Events CSS */
 
 #events {

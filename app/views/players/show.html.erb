@@ -1,0 +1,27 @@
+<% title @player.name %>
+
+<% content_for :head_top do %>
+	<meta charset="UTF-8">
+	<meta name="description" content=<%= "Men's National Team " + @player.position + " " + @player.name %>>
+	<meta name="keywords" content=" "><!--xxxx fill dynamically (head coach - team name) -->
+<% end %>
+<% content_for :head_end do %>
+<% end %>
+<% content_for :body_top do %>
+<% end %>
+<% content_for :body_end do %>
+<% end %>
+
+<div class="container">
+	<div class="jumbotron" id="show-article">
+		<div class="row col-xs-12 post-title-show">
+			<h2><%= @player.name%> | <%= @player.number %> | <%= @player.position %></h2>
+			<h4></h4>
+			<hr>
+		</div>
+		<div class="row">
+		<%= image_tag(@player.image.url, :alt => @player.name + " Player Image", class:"post-img-main-show") %>
+			<p class="post-body"><%= @player.text %><p>
+		</div>
+	</div>
+</div>

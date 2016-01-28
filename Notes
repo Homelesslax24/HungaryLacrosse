@@ -7,17 +7,20 @@ To Do:
 		Make index show email, not user id
 	Home Page
 		Update responsiveness of news and events
-	National Team page
-		Make Staff populate dynamically
-			img, teams [has_and_belongs_to_many to National_Teams]
-		Make Players populate dynamically	
-			img, teams [has_and_belongs_to_many to National_Teams] (M, W, M U19, W U19, Indoor)
-	Association
-		Make board emails send email
+		
 
 
+
+
+
+
+
+
+
+
+		
 	Next draft:
-		Hack test that only a super admin can make another super admin - you whitelisted the super admin in params. concern that you cold proxy that in somehow or use the address bar
+		Hack test that only a super admin can make another super admin - you whitelisted the super admin in params. concern that you could proxy that in somehow or use the address bar
 		Clean up CSS 
 		Admin Filters
 			-Make it use emails, not the wierd hash thing
@@ -30,10 +33,11 @@ To Do:
 			for flash language switch, see http://guides.rubyonrails.org/i18n.html#adding-date-time-formats and scroll up
 		Admin "Help" section
 		National Team page
-			Make National_Teams populate dynamcally and can be added from admin
-			name, has_and_belongs_to_many to Staffs, has_and_belongs_to_many to Players, published
+			Make National_Teams populate dynamcally and can be added from adminname, has_and_belongs_to_many to Staffs, has_and_belongs_to_many to Players, published
+			Make whole rows as links in the players table (it's a js issue)
 		Association
 			Make Board table look more centered vs title if possible
+			Make board emails send email
 			Make Board members populate dynamically
 				name, title, email
 

@@ -15,12 +15,13 @@ ActiveAdmin.register Player do
       f.input :number
       f.input :position, :as => :select, :collection => ["Attack", "Midfield", "Defense", "Goalie"]
       f.input :club
+      f.input :image
       f.input :text
     end
     f.actions
   end
 
-	permit_params :name, :number, :position, :club, :text
+	permit_params :name, :number, :position, :club, :text, :image
 
 
 end

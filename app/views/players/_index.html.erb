@@ -11,11 +11,11 @@
 			</tr>
 			<% @players.each do |player| %>
 				<tr>
-					<td><%= image_tag("noimg.png", :alt => player.name + " Player Image", class:"player-img") %></td>
-					<td><%= player.number %></td>
-					<td><%= player.name %></td>
-					<td><%= player.position %></td>
-					<td><%= player.club %></td>
+					<td><%= image_tag(player.image.url, :alt => player.name + " Player Image", class:"player-img") %></td>
+					<td><%= link_to player.number, player %></td>
+					<td><%= link_to player.name, player %></td>
+					<td><%= link_to player.position, player %></td>
+					<td><%= link_to player.club, player %></td>
 				</tr>
 			<% end %>
 		</table>
