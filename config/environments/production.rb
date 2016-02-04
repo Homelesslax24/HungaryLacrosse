@@ -77,7 +77,21 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  ActionMailer::Base.delivery_method = :smtp
+  ActionMailer::Base.perform_deliveries = true
+  ActionMailer::Base.raise_delivery_errors = true
+  ActionMailer::Base.smtp_settings = 
+  {
+
+    :address            => 'mail.lacrosse.hu',
+    :port               => 587,
+    :domain             => 'mail.lacrosse.hu', #you can also use google.com
+    :authentication     => :plain,
+    :user_name          => 'brad@lacrosse.hu',
+    :password           => 'XXXXXXX'
+  }
+  # config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  
   # Devise intallation step 1.  Defines default url options. Required for heroku.
   # xxx Set this to actual Host Name 
   
