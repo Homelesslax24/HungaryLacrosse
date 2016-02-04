@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-	before_action :authenticate_admin_user!, except: [:index, :show]
+	# before_action :authenticate_admin_user!, except: [:index, :show]
 
 	def home
 		#Supports News/Article functionality on the home page
