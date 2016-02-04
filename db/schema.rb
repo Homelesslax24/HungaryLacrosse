@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160127215631) do
+ActiveRecord::Schema.define(version: 20160204190835) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -57,7 +57,6 @@ ActiveRecord::Schema.define(version: 20160127215631) do
     t.text     "text"
     t.boolean  "hu"
     t.boolean  "en"
-    t.integer  "admin_user_id"
     t.boolean  "published"
     t.date     "published_at"
     t.datetime "created_at",                  null: false
@@ -67,7 +66,10 @@ ActiveRecord::Schema.define(version: 20160127215631) do
     t.integer  "featured_image_file_size"
     t.datetime "featured_image_updated_at"
     t.string   "keywords"
+    t.integer  "admin_user_id"
   end
+
+  add_index "articles", ["admin_user_id"], name: "index_articles_on_admin_user_id"
 
   create_table "events", force: :cascade do |t|
     t.string   "name"
@@ -78,14 +80,16 @@ ActiveRecord::Schema.define(version: 20160127215631) do
     t.boolean  "published"
     t.boolean  "hu"
     t.boolean  "en"
-    t.integer  "admin_user_id"
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
     t.string   "featured_image_file_name"
     t.string   "featured_image_content_type"
     t.integer  "featured_image_file_size"
     t.datetime "featured_image_updated_at"
+    t.integer  "admin_user_id"
   end
+
+  add_index "events", ["admin_user_id"], name: "index_events_on_admin_user_id"
 
   create_table "players", force: :cascade do |t|
     t.string   "name"
