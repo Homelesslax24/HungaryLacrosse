@@ -93,7 +93,7 @@ textarea {
 	margin-bottom: 40px;
 	font-weight: 900;
 	text-transform: uppercase;
-	color: #fff;
+	color: #111;
 }
 
 /* Shared CSS*/
@@ -137,7 +137,7 @@ textarea {
 .header-full {
 	margin-top: 0;
 	margin-bottom: 0;
-	background-color: #ddd;
+	background-color: #F8F8F8;
   /* The background image */
   background-image: url(roho-header.jpg);
   /* Set a specified height, or the minimum height for the background image */
@@ -160,14 +160,16 @@ textarea {
 
 /* News CSS */
 #news {
-	background-color: #ddd;
+	background-color: #F8F8F8;
 	padding-top: 15px;
 	padding-bottom: 15px;
-// 	background-image: image-url("gameday_001.jpg");
-// 	background-size: cover;
-//   background-repeat: no-repeat;
+	margin-top: -45px;
 }
 
+.anchor {
+	padding-top: 45px;
+	margin-top: -45px;
+}
 #news .jumbotron {
 	margin-bottom: 15px;
 	max-height: 800px;
@@ -280,7 +282,7 @@ textarea {
 /* Upcoming Events CSS */
 
 #events {
-	background-color: #ddd;
+	background-color: #F8F8F8;
 	padding-top: 15px;
 	padding-bottom: 15px;
 }
@@ -324,7 +326,7 @@ textarea {
 
 /* Team CSS */
 #teams {
-	background-color: #ddd;
+	background-color: #F8F8F8;
 	padding-top: 15px;
 	padding-bottom: 15px;
 	  /* The background image */
@@ -359,7 +361,7 @@ textarea {
 
 /* Sponsor CSS*/
 #sponsors {
-	background-color: #ddd;
+	background-color: #F8F8F8;
 	padding-top: 15px;
 	padding-bottom: 15px;
 	  background-image: url(gameday_001.jpg);
