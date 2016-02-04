@@ -62,4 +62,5 @@ class ConfirmationsController < Devise::ConfirmationsController
     set_flash_message :notice, :confirmed
     # Commented out redirect to sign in.  Changed to redirect to password change
     # sign_in_and_redirect(resource_name, @confirmable)
+  end  
 end
