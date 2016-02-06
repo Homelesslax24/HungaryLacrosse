@@ -87,12 +87,22 @@ Rails.application.configure do
     :port               => 587,
     :domain             => 'mail.lacrosse.hu', #you can also use google.com
     :authentication     => :plain,
-    :user_name          => 'brad@lacrosse.hu',
-    :password           => 'XXXXXXX'
+    :user_name          => ENV['SYSTEM_EMAIL_USERNAME'],
+    :password           => ENV['SYSTEM_EMAIL_PASSWORD'],
   }
   # config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   
   # Devise intallation step 1.  Defines default url options. Required for heroku.
   # xxx Set this to actual Host Name 
+
+  #Sets paperclip to upload to Amazon S3
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_credentials => {
+      :bucket => ENV['S3_BUCKET_NAME'],
+      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+    }
+  }
   
 end
