@@ -56,6 +56,7 @@ ActiveAdmin.register AdminUser, as: "Admins" do
 # Prescribes the form entries for Edit and New
   form do |f|
     f.inputs "Admin Details" do
+      devise_error_messages!
       f.input :email
       f.input :password
       f.input :password_confirmation
