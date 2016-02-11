@@ -8,7 +8,7 @@ class AdminUser < ActiveRecord::Base
 
   validates :password, :presence => true,
             :on => [:create, :update],
-            :format => {:with => /\A.*(?=.{10,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\@\#\$\%\^\&\+\=]).*\Z/, :message => "Password must include a capital letter, lowercase letter, number, and special character"}
+            :format => {:with => /\A.*(?=.{10,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\@\#\$\%\^\&\+\=]).*\Z/, :message => "Password must be at least ten characters, and include a capital letter, lowercase letter, number, and special character"}
 
   # after_create { |admin| admin.send_reset_password_instructions }
 
