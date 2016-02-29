@@ -133,6 +133,9 @@ textarea {
 }
 
 /* Navbar and Header CSS*/
+.nav > li > a, .dropdown-menu > li > a {
+	font-size: 18px;
+}
 
 .navbar-brand {
   font-weight: 900;
