@@ -164,7 +164,7 @@ textarea {
   /* Set the background image to no repeat */
   background-repeat: no-repeat;
   /* Scale the background image to be as large as possible */
-  background-size: cover;
+  background-size: contain;
 }
 
 #main-title {
