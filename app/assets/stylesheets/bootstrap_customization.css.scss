@@ -176,6 +176,11 @@ textarea {
 }
 
 @media only screen and (max-width: 999px) {
+	.header-full {
+		background-size: auto 100%;
+		min-height: 100vh;
+	}
+
 	#main-title {
 		text-align: center !important;
 		margin-top: 30vh;
