@@ -177,12 +177,13 @@ textarea {
 
 @media only screen and (max-width: 999px) {
 	.header-full {
+		max-width: 999px;
 		background-size: auto 100%;
 		min-height: 100vh;
 	}
 
 	#main-title {
-		text-align: center !important;
+		text-align: center;
 		margin-top: 30vh;
 		font-size: 8.5vw;
 		background-color: rgba(0,0,0,0.5);
