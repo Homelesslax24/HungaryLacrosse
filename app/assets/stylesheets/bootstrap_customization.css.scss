@@ -18,6 +18,7 @@ $btn-default-color:											#EC1D25;
 $btn-default-bg:												#ecf0f1;
 
 $grid-gutter-width:											15px;
+$grid-float-breakpoint:									1000px;
 
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
@@ -141,7 +142,7 @@ textarea {
 
 /* Navbar and Header CSS*/
 .nav > li > a, .dropdown-menu > li > a {
-	font-size: 18px;
+	font-size: 1.5em;
 }
 
 .navbar-brand {
@@ -164,7 +165,7 @@ textarea {
   /* Set the background image to no repeat */
   background-repeat: no-repeat;
   /* Scale the background image to be as large as possible */
-  background-size: contain;
+  background-size: cover;
 }
 
 #main-title {
@@ -173,6 +174,18 @@ textarea {
 	font-size: 5.3vw;
 	text-transform: uppercase;
 }
+
+// @media only screen and (max-width: 680px) {
+// 	.header-full {
+// 		min-height: 100px;
+// 	}
+
+// 	#main-title {
+// 		margin-top: 10%;
+// 	}
+// }
+
+
 
 /* News CSS */
 #news {
@@ -398,7 +411,7 @@ textarea {
 	background-color: #F8F8F8;
 	padding-top: 15px;
 	padding-bottom: 15px;
-	  background-image: url(gameday_001.jpg);
+	background-image: url(gameday_001.jpg);
   /* Set a specified height, or the minimum height for the background image */
   min-height: 700px;
   /* Set background image to fixed (don't scroll along with the page) */
