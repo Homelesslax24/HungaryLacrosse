@@ -175,15 +175,14 @@ textarea {
 	text-transform: uppercase;
 }
 
-// @media only screen and (max-width: 680px) {
-// 	.header-full {
-// 		min-height: 100px;
-// 	}
-
-// 	#main-title {
-// 		margin-top: 10%;
-// 	}
-// }
+@media only screen and (max-width: 999px) {
+	#main-title {
+		text-align: center !important;
+		margin-top: 30vh;
+		font-size: 8.5vw;
+		background-color: rgba(0,0,0,0.5);
+	}
+}
 
 
 
@@ -216,6 +215,7 @@ textarea {
 @media only screen and (max-width: 680px) {
 	.social-feed {
 		margin-left: 2.5%;
+		width:100%;
 	}
 
 	#social-news {
@@ -223,7 +223,7 @@ textarea {
 	}	
 
 	#social-news .container-fluid {
-		padding-left: 2.5%;
+		padding-left: 12.5%;
 	}
 }
 
