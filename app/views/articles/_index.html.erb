@@ -13,7 +13,7 @@
 								<h4><%= article.subtitle %></h4>
 								<h6 class="light"><%= l(article.published_at, :format=>:article_date) %> <%= l(article.published_at, :format=>:article_year) %></h6>
 								<hr>
-								<p><%= truncate article.text, length: 175 %><p>
+								<p><%= truncate(article.text.html_safe, length: 175, :escape => false) %><p>
 								<h4 class="read-more"><%= link_to "Read more...", article %></h4>
 							</div>	
 					</div>	

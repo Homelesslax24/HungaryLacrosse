@@ -22,7 +22,7 @@
 		</div>
 		<div class="row">
 			<%= image_tag(@article.featured_image.url, :alt => truncate(@article.title, limit: 20, :separator => ' ') + "image", class:"post-img-main-show") %>
-			<p class="post-body"><%= @article.text %><p>
+			<p class="post-body"><%= @article.text.html_safe %><p>
 		</div>
 	</div>
 </div>
