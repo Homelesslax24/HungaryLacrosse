@@ -14,7 +14,7 @@
 							<hr>
 						</div>
 						<div class="row event-text">
-							<p><%= event.text %><p>
+							<p><%= event.text.html_safe %><p>
 
 							<%= link_to "Click here to find out more about the " + event.name, event.website, target: "_blank" %>	
 						</div>	
