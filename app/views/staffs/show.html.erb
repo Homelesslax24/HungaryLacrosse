@@ -20,7 +20,7 @@
 		</div>
 		<div class="row">
 		<%= image_tag(@staff.image.url, :alt => "Hungary Lacrosse " + @staff.title + ", " + @staff.name, class:"post-img-main-show") %>
-			<p class="post-body"><%= @staff.text %><p>
+			<p class="post-body"><%= @staff.text.html_safe %><p>
 		</div>
 	</div>
 </div>

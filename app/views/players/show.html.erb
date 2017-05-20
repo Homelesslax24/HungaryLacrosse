@@ -21,7 +21,7 @@
 		</div>
 		<div class="row">
 		<%= image_tag(@player.image.url, :alt => @player.name + " Player Image", class:"post-img-main-show") %>
-			<p class="post-body"><%= @player.text %><p>
+			<p class="post-body"><%= @player.text.html_safe %><p>
 		</div>
 	</div>
 </div>
