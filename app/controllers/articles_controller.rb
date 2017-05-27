@@ -16,11 +16,11 @@ class ArticlesController < ApplicationController
 	def create
     @article = current_admin_user.articles.build(article_params)
     
-    if @article.save 
-      flash[:success] = "Your article was created successfully!"
-    else
-      render action: 'new'
-    end  
+    # if @article.save 
+    #   flash[:success] = "Your article was created successfully!"
+    # else
+    #   render action: 'new'
+    # end  
   end  
 
   private
