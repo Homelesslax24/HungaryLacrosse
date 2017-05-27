@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   root "pages#home"
 
   resources "contacts", only: [:new, :create]
-  resources "articles", only: [:index, :show]
+  resources "articles", only: [:index, :show, :create, :new, :edit]
   resources "staffs", only: [:index, :show]
   resources "players", only: [:index, :show]
 
