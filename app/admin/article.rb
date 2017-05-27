@@ -6,7 +6,7 @@ ActiveAdmin.register Article, as: "News" do
 	    
 	    if @article.save 
 	      flash[:success] = "Your article was created successfully!"
-	      redirect_to admin_articles_path
+	      redirect_to edit_admin_news_path
 	    else
 	      render action: 'new'
 	    end  
