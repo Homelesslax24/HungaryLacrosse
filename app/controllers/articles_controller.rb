@@ -18,6 +18,7 @@ class ArticlesController < ApplicationController
     
     if @article.save 
       flash[:success] = "Your article was created successfully!"
+      render action: 'index'
     else
       render action: 'new'
     end  
