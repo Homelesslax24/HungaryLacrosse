@@ -33,7 +33,7 @@ class ArticlesController < ApplicationController
     # end
 
     def article_params
-      params.require(:article).permit(:id, :title, :subtitle, :text, :hu, :en, :published, :published_at,:created_at, :updated_at, :featured_image_file_name, :featured_image_content_type, :featured_image_file_size, :featured_image_updated_at, :keywords, :featured_image)
+      params.require(:article).permit(:id, :title, :subtitle, :text, :hu, :en, :published, :published_at, :created_at, :updated_at, :featured_image_file_name, :featured_image_content_type, :featured_image_file_size, :featured_image_updated_at, :keywords, :featured_image)
     end
 
 end
