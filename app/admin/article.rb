@@ -8,7 +8,7 @@ ActiveAdmin.register Article, as: "News" do
 	      flash[:success] = "Your article was created successfully!"
 	      redirect_to admin_news_index_path
 	    else
-	      redirect_to edit_admin_news_path
+	      redirect_to edit_admin_news_path(params(:id))
 	    end  
 	  end  
 
