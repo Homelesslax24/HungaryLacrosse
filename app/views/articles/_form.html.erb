@@ -1,0 +1,14 @@
+<% form do |f| %>
+	<% f.inputs "Article" do %>
+	 	<%= f.input :title %>
+    <%= f.input :subtitle %>
+    <%= f.input :text %>
+    <%= f.input :keywordsv %>
+    <%= f.input :featured_image %>
+    <%= f.input :published_at %>
+    <%= f.input :published %>
+    <%= f.input :hu, label: "Hungarian" %>
+    <%= f.input :en, label: "English" %>
+  <% end %>
+  <% f.actions %>
+<% end %>
