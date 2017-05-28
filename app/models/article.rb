@@ -1,7 +1,6 @@
 class Article < ActiveRecord::Base
 	belongs_to :admin_user
 
-	validates :admin_user_id, presence: true
 	validates :title, presence: true, length: { minimum: 5, maximum: 100 }
 	validates :text, presence: true, length: { minimum: 50 }
 

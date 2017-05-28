@@ -1,4 +1,5 @@
-ActiveAdmin.register Article, as: "News" do
+ActiveAdmin.register Article do
+	before_filter :authenticate_admin_user!
 
 	controller do
 		def create
@@ -6,16 +7,17 @@ ActiveAdmin.register Article, as: "News" do
 	    
 	    if @article.save 
 	      flash[:success] = "Your article was created successfully!"
-	      redirect_to admin_news_index_path
+	      redirect_to admin_article
 	    else
-	      redirect_to edit_admin_news_path(params(:id))
+	      flash[:success] = "It didn't work..."
+	      redirect_to admin_path
 	    end  
 	  end  
 
 	  private
 
 	  	def article_params
-		    params.require(:article).permit(:title, :subtitle, :text, :hu, :en, :published, :published_at, :featured_image, :keywords)
+		    params.require(:article).permit(:id, :title, :subtitle, :text, :hu, :en, :published, :published_at, :featured_image, :keywords)
 		  end
 
 	end  
@@ -47,26 +49,26 @@ ActiveAdmin.register Article, as: "News" do
 		end
 	end
 
-		form do |f|
-	    f.inputs "Article" do
-	      f.input :title
-	      f.input :subtitle
-	      f.input :text
-	      f.input :keywords
-	      f.input :featured_image
-		    f.input :published_at
-		    f.input :published
-	      f.input :hu, label: "Hungarian"
-	      f.input :en, label: "English"
-	    end
-	    f.actions
-	  end
+	form do |f|
+    f.inputs "Article" do
+      f.input :title
+      f.input :subtitle
+      f.input :text
+      f.input :keywords
+      f.input :featured_image
+	    f.input :published_at
+	    f.input :published
+      f.input :hu, label: "Hungarian"
+      f.input :en, label: "English"
+    end
+    f.actions
+  end
 
 
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
-	permit_params :title, :subtitile, :text, :hu, :en, :published, :published_at, :featured_image, :keywords
+	permit_params :title, :subtitile, :text, :hu, :en, :published, :published_at, :featured_image, :keywords, :admin_user_id
 #
 # or
 #

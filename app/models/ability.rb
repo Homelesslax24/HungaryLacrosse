@@ -9,6 +9,7 @@ class Ability
     can :manage, Sponsor
     can :manage, Staff
     can :manage, Player
+    can :manage, Article
 		if admin_user.super_admin == true
   		can :manage, AdminUser
       can :manage, Event

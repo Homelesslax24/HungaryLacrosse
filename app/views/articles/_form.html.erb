@@ -1,14 +1,45 @@
-<% form do |f| %>
-	<% f.inputs "Article" do %>
-	 	<%= f.input :title %>
-    <%= f.input :subtitle %>
-    <%= f.input :text %>
-    <%= f.input :keywordsv %>
-    <%= f.input :featured_image %>
-    <%= f.input :published_at %>
-    <%= f.input :published %>
-    <%= f.input :hu, label: "Hungarian" %>
-    <%= f.input :en, label: "English" %>
-  <% end %>
-  <% f.actions %>
+<%= form_for(@article) do |f| %>
+	<div class="row">
+    <div class="form-group col-xs-12 col-md-4">
+      <%= f.label :title %><br>
+      <%= f.text_field :title, class: "form-control", autofocus: true %>
+    </div>
+    <div class="form-group col-xs-12 col-md-8">
+      <%= f.label :subtitle %><br>
+      <%= f.text_field :subtitle, class: "form-control" %>
+    </div>
+    <div class="form-group col-xs-12 col-md-8">
+      <%= f.label :text %><br>
+      <%= f.text_field :text, class: "form-control" %>
+    </div>
+    <div class="form-group col-xs-12 col-md-8">
+      <%= f.label :keywords %><br>
+      <%= f.text_field :keywords, class: "form-control" %>
+    </div>
+    <div class="form-group col-xs-12 col-md-8">
+      <%= f.label :featured_image %><br>
+      <%= f.file_field :featured_image, class: "form-control" %>
+    </div>
+    <div class="form-group col-xs-12 col-md-8">
+      <%= f.label :published_at %><br>
+      <%= f.text_field :published_at, class: "form-control" %>
+    </div>
+    <div class="form-group col-xs-12 col-md-8">
+      <%= f.label :published %><br>
+      <%= f.radio_button :published, class: "form-control" %>
+    </div>
+    <div class="form-group col-xs-12 col-md-8">
+      <%= f.label :hu %><br>
+      <%= f.radio_button :hu, class: "form-control" %>
+    </div>
+    <div class="form-group col-xs-12 col-md-8">
+      <%= f.label :en%><br>
+      <%= f.radio_button :en, class: "form-control" %>
+    </div>
+    <div class="form-group right">
+      <button type="button" class="btn btn-default btn-lg" data-dismiss="modal">Cancel</button>
+      <%= f.submit "Save", class: "btn btn-success btn-lg" %>
+    </div> 
+  </div>  
+	 	
 <% end %>
