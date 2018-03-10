@@ -20,6 +20,8 @@ gem 'will_paginate-bootstrap'
 gem 'mail_form'
 gem 'activeadmin', github: 'activeadmin'
 gem 'cancancan', '~> 1.10'
+gem 'recaptcha', require: 'recaptcha/rails'
+gem 'bcrypt'
 
 
 group :development, :test do

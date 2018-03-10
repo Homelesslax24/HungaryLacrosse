@@ -18,6 +18,9 @@
       <%= f.text_field :nickname, :hint => 'Leave this field blank!' %>
     </div>
     <div>
+      <%= recaptcha_tags %>
+    </div>
+    <div>
       </br>
       <%= f.submit 'Send', class: "btn btn-primary btn-lg" %>
     </div>
