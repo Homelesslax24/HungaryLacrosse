@@ -89,6 +89,8 @@ Rails.application.configure do
     :authentication     => :plain,
     :user_name          => ENV['SYSTEM_EMAIL_USERNAME'],
     :password           => ENV['SYSTEM_EMAIL_PASSWORD'],
+    :enable_starttls_auto => true,
+    :openssl_verify_mode  => 'none'
   }
   # config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   
