@@ -82,23 +82,14 @@ Rails.application.configure do
   ActionMailer::Base.raise_delivery_errors = true
   ActionMailer::Base.smtp_settings = 
   {
-    address: "server70.web-hosting.com",
-    port: 465,
-    domain: "tlspm.herokuapp.com",
-    ssl: true,
-    tls: true,
-    authentication: :plain,
-    enable_starttls_auto: true,
-    user_name: ENV["EMAIL_USERNAME"],
-    password: ENV["EMAIL_PASSWORD"]
-    # :address            => 'mail.lacrosse.hu',
-    # :port               => 587,
-    # :domain             => 'mail.lacrosse.hu', #you can also use google.com
-    # :authentication     => :plain,
-    # :user_name          => ENV['SYSTEM_EMAIL_USERNAME'],
-    # :password           => ENV['SYSTEM_EMAIL_PASSWORD'],
-    # :enable_starttls_auto => true,
-    # :openssl_verify_mode  => 'none'
+    :address            => 'mail.lacrosse.hu',
+    :port               => 587,
+    :domain             => 'mail.lacrosse.hu', #you can also use google.com
+    :authentication     => :plain,
+    :user_name          => ENV['SYSTEM_EMAIL_USERNAME'],
+    :password           => ENV['SYSTEM_EMAIL_PASSWORD'],
+    :enable_starttls_auto => true,
+    :openssl_verify_mode  => 'none'
   }
   # config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   
